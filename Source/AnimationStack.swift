@@ -14,13 +14,21 @@ final class AnimationStack: NSObject {
         self.layer = layer
     }
 
+    func run() {
+        guard let animation = self.pop() else {
+            return
+        }
+        animation.delegate = self
+        layer.add(animation, forKey: nil)
+    }
+
     func push(_ animation: CAAnimationGroup) {
         animations.append(animation)
     }
 
     @discardableResult
     func pop() -> CAAnimationGroup? {
-        guard animations.count > 1 else {
+        guard animations.count > 0 else {
             return nil
         }
         return animations.removeFirst()
@@ -30,10 +38,6 @@ final class AnimationStack: NSObject {
 // MARK: - CAAnimationDelegate implementation
 extension AnimationStack: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        guard let animation = self.pop() else {
-            return
-        }
-        animation.delegate = self
-        layer.add(animation, forKey: nil)
+        run()
     }
 }

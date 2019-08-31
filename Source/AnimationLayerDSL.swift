@@ -19,6 +19,7 @@ public struct AnimationLayerDSL {
     public func runAnimation(_ closure: (AnimationMaker) -> Void) -> AnimationLayerChainDSL {
         let animationGroup = AnimationMaker.makeAnimation(item: layer, closure: closure)
         animationStack.push(animationGroup)
+        animationStack.run()
         return AnimationLayerChainDSL(layer: layer, animationStack: animationStack)
     }
 }
