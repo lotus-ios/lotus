@@ -25,7 +25,7 @@
 		9CED4304231AE92C00642303 /* AnimationMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED4303231AE92C00642303 /* AnimationMakerEditable.swift */; };
 		9CED4306231AE9C300642303 /* MotionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED4305231AE9C300642303 /* MotionType.swift */; };
 		9CED4308231AE9CB00642303 /* ScaleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED4307231AE9CB00642303 /* ScaleType.swift */; };
-		9CED430A231AECD800642303 /* AnimationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED4309231AECD800642303 /* AnimationStack.swift */; };
+		9CED430A231AECD800642303 /* AnimationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED4309231AECD800642303 /* AnimationQueue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,7 @@
 		9CED4303231AE92C00642303 /* AnimationMakerEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationMakerEditable.swift; sourceTree = "<group>"; };
 		9CED4305231AE9C300642303 /* MotionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionType.swift; sourceTree = "<group>"; };
 		9CED4307231AE9CB00642303 /* ScaleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleType.swift; sourceTree = "<group>"; };
-		9CED4309231AECD800642303 /* AnimationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationStack.swift; sourceTree = "<group>"; };
+		9CED4309231AECD800642303 /* AnimationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationQueue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 				9CED42FB231AE88900642303 /* AnimationType.swift */,
 				9CED4305231AE9C300642303 /* MotionType.swift */,
 				9CED4307231AE9CB00642303 /* ScaleType.swift */,
-				9CED4309231AECD800642303 /* AnimationStack.swift */,
+				9CED4309231AECD800642303 /* AnimationQueue.swift */,
 				9CED42FD231AE89C00642303 /* Animation.swift */,
 				9CED42F6231AE85000642303 /* AnimationDescription.swift */,
 				9CED42F8231AE86F00642303 /* AnimationAttribute.swift */,
@@ -256,7 +256,7 @@
 				9CED42ED231AE5C700642303 /* AnimationLayerDSL.swift in Sources */,
 				9CED42FC231AE88900642303 /* AnimationType.swift in Sources */,
 				9CED4308231AE9CB00642303 /* ScaleType.swift in Sources */,
-				9CED430A231AECD800642303 /* AnimationStack.swift in Sources */,
+				9CED430A231AECD800642303 /* AnimationQueue.swift in Sources */,
 				9CED4302231AE90400642303 /* AnimationMakerAnimatable.swift in Sources */,
 				9CED42F1231AE78D00642303 /* AnimationMaker.swift in Sources */,
 				9CED42F7231AE85000642303 /* AnimationDescription.swift in Sources */,

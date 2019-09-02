@@ -6,7 +6,7 @@
 //  Copyright © 2019 Vladislav Kondrashkov. All rights reserved.
 //
 
-public class AnimationMakerEditable {
+public final class AnimationMakerEditable {
     let description: AnimationDescription
 
     init(description: AnimationDescription) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class AnimationMaker {
+public final class AnimationMaker {
     private let item: AnimatableItem
     private var descriptions: [AnimationDescription] = []
 

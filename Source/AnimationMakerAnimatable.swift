@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class AnimationMakerAnimatable {
+public final class AnimationMakerAnimatable {
     let description: AnimationDescription
 
     init(description: AnimationDescription) {

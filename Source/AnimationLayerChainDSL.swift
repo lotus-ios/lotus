@@ -8,9 +8,9 @@
 
 public struct AnimationLayerChainDSL {
     let layer: AnimationLayer
-    let animationStack: AnimationStack
+    let animationStack: AnimationQueue
 
-    init(layer: AnimationLayer, animationStack: AnimationStack) {
+    init(layer: AnimationLayer, animationStack: AnimationQueue) {
         self.layer = layer
         self.animationStack = animationStack
     }

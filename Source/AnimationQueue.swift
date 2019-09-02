@@ -1,12 +1,12 @@
 //
-//  AnimationStack.swift
+//  AnimationQueue.swift
 //  Lotus
 //
 //  Created by Vladislav Kondrashkov on 8/31/19.
 //  Copyright © 2019 Vladislav Kondrashkov. All rights reserved.
 //
 
-final class AnimationStack: NSObject {
+final class AnimationQueue: NSObject {
     private let layer: AnimationLayer
     private var animations: [CAAnimationGroup] = []
 
@@ -36,7 +36,7 @@ final class AnimationStack: NSObject {
 }
 
 // MARK: - CAAnimationDelegate implementation
-extension AnimationStack: CAAnimationDelegate {
+extension AnimationQueue: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         run()
     }

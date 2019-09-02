@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class AnimationDescription {
+public final class AnimationDescription {
     let item: AnimatableItem
     var attribute: AnimationAttribute
     let type: AnimationType

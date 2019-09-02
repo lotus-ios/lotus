@@ -8,11 +8,11 @@
 
 public struct AnimationLayerDSL {
     let layer: AnimationLayer
-    let animationStack: AnimationStack
+    let animationStack: AnimationQueue
 
     init(layer: AnimationLayer) {
         self.layer = layer
-        self.animationStack = AnimationStack(layer: layer)
+        self.animationStack = AnimationQueue(layer: layer)
     }
 
     @discardableResult
