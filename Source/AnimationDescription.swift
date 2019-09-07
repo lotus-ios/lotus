@@ -11,11 +11,12 @@ import UIKit
 public final class AnimationDescription {
     let item: AnimatableItem
     let attribute: AnimationAttribute
-    let type: AnimationType
 
     var duration: AnimationValue = 0.3
     var delay: AnimationValue = 0.0
-    var value: AnimationValue = 0.0
+    var fromValue: AnimationValue = 0.0
+    var toValue: AnimationValue = 0.0
+    var easingType: EasingType = .linear
     var path: CGPath? = nil
 
     var keyPath: String {
@@ -24,18 +25,18 @@ public final class AnimationDescription {
 
     lazy var animation: Animation = {
         return Animation(
-            type: type,
             keyPath: keyPath,
             duration: duration,
             delay: delay,
-            value: value,
+            fromValue: fromValue,
+            toValue: toValue,
+            easingType: easingType,
             path: path
         )
     }()
 
-    init(item: AnimatableItem, attribute: AnimationAttribute, type: AnimationType) {
+    init(item: AnimatableItem, attribute: AnimationAttribute) {
         self.item = item
         self.attribute = attribute
-        self.type = type
     }
 }

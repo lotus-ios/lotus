@@ -13,37 +13,37 @@ public final class AnimationMaker {
     private var descriptions: [AnimationDescription] = []
 
     public var motion: AnimationMakerAnimatable {
-        return makeAnimatableWithAttribute(.position, type: .vector)
+        return makeAnimatableWithAttribute(.position, fromValue: item.position)
     }
 
     public func motion(_ motionType: MotionType) -> AnimationMakerAnimatable {
         switch motionType {
         case .horizontal:
-            return makeAnimatableWithAttribute(.horizontalPosition, type: .vector)
+            return makeAnimatableWithAttribute(.horizontalPosition, fromValue: item.position.x)
         case .vertical:
-            return makeAnimatableWithAttribute(.verticalPosition, type: .vector)
+            return makeAnimatableWithAttribute(.verticalPosition, fromValue: item.position.y)
         }
     }
 
     public var scaling: AnimationMakerAnimatable {
-        return makeAnimatableWithAttribute(.scale, type: .scalar)
+        return makeAnimatableWithAttribute(.scale, fromValue: item.scale)
     }
 
     public func scaling(_ scaleType: ScaleType) -> AnimationMakerAnimatable {
         switch scaleType {
         case .width:
-            return makeAnimatableWithAttribute(.widthScale, type: .scalar)
+            return makeAnimatableWithAttribute(.widthScale, fromValue: item.scaleX)
         case .height:
-            return makeAnimatableWithAttribute(.heightScale, type: .scalar)
+            return makeAnimatableWithAttribute(.heightScale, fromValue: item.scaleY)
         }
     }
 
     public var opacity: AnimationMakerAnimatable {
-        return makeAnimatableWithAttribute(.opacity, type: .scalar)
+        return makeAnimatableWithAttribute(.opacity, fromValue: item.opacity)
     }
     
     public var rotation: AnimationMakerAnimatable {
-        return makeAnimatableWithAttribute(.rotation, type: .scalar)
+        return makeAnimatableWithAttribute(.rotation, fromValue: item.rotation)
     }
 
     init(item: AnimatableItem) {
@@ -60,6 +60,8 @@ public final class AnimationMaker {
         return animations
     }
 
+    // TODO: need to change property after animation completion
+    // to make animation sequences relatively to each other
     static func makeAnimation(item: CALayer, closure: (AnimationMaker) -> Void) -> CAAnimationGroup {
         let animations = prepareAnimations(item: item, closure: closure)
         let animationGroup = CAAnimationGroup()
@@ -78,8 +80,10 @@ public final class AnimationMaker {
         return animationGroup
     }
 
-    private func makeAnimatableWithAttribute(_ attribute: AnimationAttribute, type: AnimationType) -> AnimationMakerAnimatable {
-        let description = AnimationDescription(item: item, attribute: attribute, type: type)
+    private func makeAnimatableWithAttribute(_ attribute: AnimationAttribute,
+                                             fromValue: AnimationValue) -> AnimationMakerAnimatable {
+        let description = AnimationDescription(item: item, attribute: attribute)
+        description.fromValue = fromValue
         descriptions.append(description)
         return AnimationMakerAnimatable(description: description)
     }
