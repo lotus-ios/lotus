@@ -66,7 +66,6 @@ public final class AnimationMaker {
         let animations = prepareAnimations(item: item, closure: closure)
         let animationGroup = CAAnimationGroup()
         animationGroup.fillMode = .forwards
-        animationGroup.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         animationGroup.isRemovedOnCompletion = false
         animationGroup.animations = animations.compactMap { $0.coreAnimation }
         let animationWithMaxDuration = animations.max(by: {
