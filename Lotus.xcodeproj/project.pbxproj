@@ -10,8 +10,8 @@
 		9CC02BF123059B570058FAA5 /* Lotus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC02BE723059B570058FAA5 /* Lotus.framework */; };
 		9CC02BF623059B570058FAA5 /* LotusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC02BF523059B570058FAA5 /* LotusTests.swift */; };
 		9CC02BF823059B570058FAA5 /* Lotus.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CC02BEA23059B570058FAA5 /* Lotus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9CED42E7231AE50500642303 /* UIView+AnimationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42E6231AE50500642303 /* UIView+AnimationLayer.swift */; };
-		9CED42EB231AE55600642303 /* AnimationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42EA231AE55600642303 /* AnimationLayer.swift */; };
+		9CED42E7231AE50500642303 /* UIView+AnimationLayerDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42E6231AE50500642303 /* UIView+AnimationLayerDSL.swift */; };
+		9CED42EB231AE55600642303 /* CALayer+AnimationLayerDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42EA231AE55600642303 /* CALayer+AnimationLayerDSL.swift */; };
 		9CED42ED231AE5C700642303 /* AnimationLayerDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42EC231AE5C700642303 /* AnimationLayerDSL.swift */; };
 		9CED42EF231AE62700642303 /* AnimationLayerChainDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42EE231AE62700642303 /* AnimationLayerChainDSL.swift */; };
 		9CED42F1231AE78D00642303 /* AnimationMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42F0231AE78D00642303 /* AnimationMaker.swift */; };
@@ -45,8 +45,8 @@
 		9CC02BF023059B570058FAA5 /* LotusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LotusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC02BF523059B570058FAA5 /* LotusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusTests.swift; sourceTree = "<group>"; };
 		9CC02BF723059B570058FAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CED42E6231AE50500642303 /* UIView+AnimationLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationLayer.swift"; sourceTree = "<group>"; };
-		9CED42EA231AE55600642303 /* AnimationLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationLayer.swift; sourceTree = "<group>"; };
+		9CED42E6231AE50500642303 /* UIView+AnimationLayerDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationLayerDSL.swift"; sourceTree = "<group>"; };
+		9CED42EA231AE55600642303 /* CALayer+AnimationLayerDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+AnimationLayerDSL.swift"; sourceTree = "<group>"; };
 		9CED42EC231AE5C700642303 /* AnimationLayerDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationLayerDSL.swift; sourceTree = "<group>"; };
 		9CED42EE231AE62700642303 /* AnimationLayerChainDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationLayerChainDSL.swift; sourceTree = "<group>"; };
 		9CED42F0231AE78D00642303 /* AnimationMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationMaker.swift; sourceTree = "<group>"; };
@@ -122,13 +122,13 @@
 				9CED42F8231AE86F00642303 /* AnimationAttribute.swift */,
 				9CED42FF231AE8C300642303 /* AnimationValue.swift */,
 				9CED42F4231AE7D500642303 /* AnimatableItem.swift */,
-				9CED42EA231AE55600642303 /* AnimationLayer.swift */,
 				9CED42EC231AE5C700642303 /* AnimationLayerDSL.swift */,
 				9CED42EE231AE62700642303 /* AnimationLayerChainDSL.swift */,
 				9CED42F0231AE78D00642303 /* AnimationMaker.swift */,
 				9CED4301231AE90400642303 /* AnimationMakerAnimatable.swift */,
 				9CED4303231AE92C00642303 /* AnimationMakerEditable.swift */,
-				9CED42E6231AE50500642303 /* UIView+AnimationLayer.swift */,
+				9CED42EA231AE55600642303 /* CALayer+AnimationLayerDSL.swift */,
+				9CED42E6231AE50500642303 /* UIView+AnimationLayerDSL.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -251,7 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CED42E7231AE50500642303 /* UIView+AnimationLayer.swift in Sources */,
+				9CED42E7231AE50500642303 /* UIView+AnimationLayerDSL.swift in Sources */,
 				9CED4306231AE9C300642303 /* MotionType.swift in Sources */,
 				9CED42ED231AE5C700642303 /* AnimationLayerDSL.swift in Sources */,
 				9CED42FC231AE88900642303 /* AnimationType.swift in Sources */,
@@ -264,7 +264,7 @@
 				9CED4300231AE8C300642303 /* AnimationValue.swift in Sources */,
 				9CED4304231AE92C00642303 /* AnimationMakerEditable.swift in Sources */,
 				9CED42F5231AE7D500642303 /* AnimatableItem.swift in Sources */,
-				9CED42EB231AE55600642303 /* AnimationLayer.swift in Sources */,
+				9CED42EB231AE55600642303 /* CALayer+AnimationLayerDSL.swift in Sources */,
 				9CED42FE231AE89C00642303 /* Animation.swift in Sources */,
 				9CED42F9231AE86F00642303 /* AnimationAttribute.swift in Sources */,
 			);

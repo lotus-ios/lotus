@@ -10,15 +10,18 @@ import UIKit
 
 public final class AnimationDescription {
     let item: AnimatableItem
-    var attribute: AnimationAttribute
+    let attribute: AnimationAttribute
     let type: AnimationType
-    var keyPath: String {
-        return attribute.rawValue
-    }
+
     var duration: AnimationValue = 0.3
     var delay: AnimationValue = 0.0
     var value: AnimationValue = 0.0
     var path: CGPath? = nil
+
+    var keyPath: String {
+        return attribute.rawValue
+    }
+
     lazy var animation: Animation = {
         return Animation(
             type: type,

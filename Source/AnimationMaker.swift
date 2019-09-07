@@ -15,6 +15,7 @@ public final class AnimationMaker {
     public var motion: AnimationMakerAnimatable {
         return makeAnimatableWithAttribute(.position, type: .vector)
     }
+
     public func motion(_ motionType: MotionType) -> AnimationMakerAnimatable {
         switch motionType {
         case .horizontal:
@@ -23,9 +24,11 @@ public final class AnimationMaker {
             return makeAnimatableWithAttribute(.verticalPosition, type: .vector)
         }
     }
+
     public var scaling: AnimationMakerAnimatable {
         return makeAnimatableWithAttribute(.scale, type: .scalar)
     }
+
     public func scaling(_ scaleType: ScaleType) -> AnimationMakerAnimatable {
         switch scaleType {
         case .width:
@@ -34,9 +37,11 @@ public final class AnimationMaker {
             return makeAnimatableWithAttribute(.heightScale, type: .scalar)
         }
     }
+
     public var opacity: AnimationMakerAnimatable {
         return makeAnimatableWithAttribute(.opacity, type: .scalar)
     }
+    
     public var rotation: AnimationMakerAnimatable {
         return makeAnimatableWithAttribute(.rotation, type: .scalar)
     }
@@ -45,7 +50,7 @@ public final class AnimationMaker {
         self.item = item
     }
 
-    private static func prepareAnimations(item: AnimationLayer, closure: (_ make: AnimationMaker) -> Void) -> [Animation] {
+    private static func prepareAnimations(item: CALayer, closure: (_ make: AnimationMaker) -> Void) -> [Animation] {
         let maker = AnimationMaker(item: item)
         closure(maker)
         var animations: [Animation] = []
@@ -55,7 +60,7 @@ public final class AnimationMaker {
         return animations
     }
 
-    static func makeAnimation(item: AnimationLayer, closure: (AnimationMaker) -> Void) -> CAAnimationGroup {
+    static func makeAnimation(item: CALayer, closure: (AnimationMaker) -> Void) -> CAAnimationGroup {
         let animations = prepareAnimations(item: item, closure: closure)
         let animationGroup = CAAnimationGroup()
         animationGroup.fillMode = .forwards

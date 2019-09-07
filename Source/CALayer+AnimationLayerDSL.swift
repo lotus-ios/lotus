@@ -8,9 +8,7 @@
 
 import UIKit
 
-public typealias AnimationLayer = CALayer
-
-public extension AnimationLayer {
+public extension CALayer {
     var lotus: AnimationLayerDSL {
         return AnimationLayerDSL(layer: self)
     }

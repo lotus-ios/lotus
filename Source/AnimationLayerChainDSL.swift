@@ -7,18 +7,18 @@
 //
 
 public struct AnimationLayerChainDSL {
-    let layer: AnimationLayer
-    let animationStack: AnimationQueue
+    let layer: CALayer
+    let animationQueue: AnimationQueue
 
-    init(layer: AnimationLayer, animationStack: AnimationQueue) {
+    init(layer: CALayer, animationQueue: AnimationQueue) {
         self.layer = layer
-        self.animationStack = animationStack
+        self.animationQueue = animationQueue
     }
 
     @discardableResult
     public func then(_ closure: (AnimationMaker) -> Void) -> AnimationLayerChainDSL {
         let animationGroup = AnimationMaker.makeAnimation(item: layer, closure: closure)
-        animationStack.push(animationGroup)
-        return AnimationLayerChainDSL(layer: layer, animationStack: animationStack)
+        animationQueue.push(animationGroup)
+        return AnimationLayerChainDSL(layer: layer, animationQueue: animationQueue)
     }
 }

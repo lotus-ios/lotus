@@ -12,4 +12,4 @@ public protocol AnimatableItem: AnyObject {
     var position: CGPoint { get }
 }
 
-extension AnimationLayer: AnimatableItem { }
+extension CALayer: AnimatableItem { }

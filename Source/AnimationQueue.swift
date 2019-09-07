@@ -7,11 +7,12 @@
 //
 
 final class AnimationQueue: NSObject {
-    private let layer: AnimationLayer
+    private let layer: CALayer
     private var animations: [CAAnimationGroup] = []
 
-    init(layer: AnimationLayer) {
+    init(layer: CALayer) {
         self.layer = layer
+        super.init()
     }
 
     func run() {
