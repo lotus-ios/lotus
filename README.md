@@ -1,4 +1,6 @@
 # Lotus
+[![Build Status](https://travis-ci.org/vkondrashkov/lotus.svg?branch=develop)](https://travis-ci.org/vkondrashkov/lotus)
+[![codecov](https://codecov.io/gh/vkondrashkov/lotus/branch/develop/graph/badge.svg)](https://codecov.io/gh/vkondrashkov/lotus)
 ![Language](https://img.shields.io/badge/swift-5-orange.svg)
 [![License](https://img.shields.io/github/license/vkondrashkov/lotus.svg)](https://github.com/vkondrashkov/lotus/blob/develop/LICENSE)
 
