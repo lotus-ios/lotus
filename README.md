@@ -59,24 +59,7 @@ redSquareLayer.lotus.runAnimation { make in
 ```
 
 ## Documentation
-### Run Animation
-```Swift
-layer.lotus.runAnimation { make in
-    // Make animation here
-}
-```
-### AnimationMaker attribute
-
-| AnimationMaker attribute | CALayer attribute        |
-|--------------------------|--------------------------|
-| motion                   | layer.position           |
-| motion(.vertical)        | layer.position.y         |
-| motion(.horizontal)      | layer.position.x         |
-| scale                    | layer.transform.scale    |
-| scale(.width)            | layer.transform.scale.x  |
-| scale(.height)           | layer.transform.scale.y  |
-| opacity                  | layer.opacity            |
-| rotation                 | layer.transform.rotation |
+Find out all accessible facilities in [Documentation](https://github.com/vkondrashkov/lotus/wiki/Documentation)
 
 ## Tests
 Oops, they have gone somewhere, let's wait for them!
