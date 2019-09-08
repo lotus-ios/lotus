@@ -6,15 +6,7 @@ cache:
  - bundler
  - cocoapods
 
-before_install:
-  - gem i rubygems-update -v '<3' && update_rubygems
-  - gem install bundler -v 1.17.3
-
-install:
- - bundle install --path vendor/bundle
-
 script:
-  - bundle exec pod install
   - set -o pipefail && xcodebuild -scheme LotusTests -project Lotus.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=12.0' build test | xcpretty --color
 after_success:
   - bash <(curl -s https://codecov.io/bash)
