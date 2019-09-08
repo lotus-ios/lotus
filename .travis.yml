@@ -6,6 +6,10 @@ cache:
  - bundler
  - cocoapods
 
+before_install:
+  - gem i rubygems-update -v '<3' && update_rubygems
+  - gem install bundler -v 1.17.3
+
 install:
  - bundle install --path vendor/bundle
 
