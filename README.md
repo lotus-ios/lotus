@@ -12,6 +12,10 @@ __Lotus__ – powerful nano framework that helps implement layer animation with 
     - [Installing](#installing)
     - [Usage](#usage)
 - [Documentation](#documentation)
+- [Tests](#tests)
+- [Contributing](#contributing)
+- [Authors](#authors)
+- [License](#license)
 
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
