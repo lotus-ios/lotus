@@ -13,17 +13,17 @@ public protocol AnimatableItem: AnyObject {
     var scale: CGFloat { get }
     var scaleX: CGFloat { get }
     var scaleY: CGFloat { get }
-    var cgOpacity: CGFloat { get }
+    var alpha: CGFloat { get }
     var rotation: CGFloat { get }
 }
 
 extension CALayer: AnimatableItem {
     public var scale: CGFloat {
         let presentationLayer = self.presentation() ?? self
-        _ = presentationLayer.affineTransform() // let transform
-        // For some reason scale animation doesn't change matrix
-        // and even resets it to .identity
-        // return sqrt(transform.a * transform.a + transform.c * transform.c)
+        _ = presentationLayer.affineTransform()
+        /// For some reason scale animation doesn't change matrix
+        /// and even resets it to .identity
+        /// return sqrt(transform.a * transform.a + transform.c * transform.c)
         return 1.0
     }
 
@@ -39,7 +39,7 @@ extension CALayer: AnimatableItem {
         return transform.d
     }
 
-    public var cgOpacity: CGFloat {
+    public var alpha: CGFloat {
         return CGFloat(opacity)
     }
 
