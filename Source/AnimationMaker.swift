@@ -39,7 +39,7 @@ public final class AnimationMaker {
     }
 
     public var opacity: AnimationMakerAnimatable {
-        return makeAnimatableWithAttribute(.opacity, fromValue: item.opacity)
+        return makeAnimatableWithAttribute(.opacity, fromValue: item.cgOpacity)
     }
     
     public var rotation: AnimationMakerAnimatable {

@@ -13,8 +13,8 @@ public protocol AnimatableItem: AnyObject {
     var scale: CGFloat { get }
     var scaleX: CGFloat { get }
     var scaleY: CGFloat { get }
-    var opacity: Float { get }
-    var rotation: Float { get }
+    var cgOpacity: CGFloat { get }
+    var rotation: CGFloat { get }
 }
 
 extension CALayer: AnimatableItem {
@@ -39,9 +39,13 @@ extension CALayer: AnimatableItem {
         return transform.d
     }
 
-    public var rotation: Float {
+    public var cgOpacity: CGFloat {
+        return CGFloat(opacity)
+    }
+
+    public var rotation: CGFloat {
         let presentationLayer = self.presentation() ?? self
         let transform = presentationLayer.affineTransform()
-        return atan2f(Float(transform.b), Float(transform.a))
+        return CGFloat(atan2f(Float(transform.b), Float(transform.a)))
     }
 }
