@@ -24,4 +24,10 @@ public final class AnimationMakerEditable {
         description.delay = value
         return self
     }
+
+    @discardableResult
+    public func ease(_ type: EasingType) -> AnimationMakerEditable {
+        description.easingType = type
+        return self
+    }
 }

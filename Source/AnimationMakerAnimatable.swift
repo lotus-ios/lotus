@@ -22,8 +22,10 @@ public final class AnimationMakerAnimatable {
             path.move(to: description.item.position)
             path.addLine(to: point)
             description.path = path.cgPath
+        } else if let double = value as? Double {
+            description.toValue = CGFloat(double)
         } else {
-            description.value = value
+            description.toValue = value
         }
         return AnimationMakerEditable(description: self.description)
     }
