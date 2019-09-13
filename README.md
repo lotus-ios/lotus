@@ -6,6 +6,29 @@
 
 __Lotus__ – powerful nano framework that helps implement layer animation with easy syntax. This DSL relieves you from routine code of making animations via CoreAnimation.
 
+![Lotus](Example/Assets/lotus.gif)
+```Swift
+for i in 0..<10 {
+    let petalLayer = PetalLayer()
+    petalLayer.position = CGPoint(x: view.frame.width / 2, y: view.frame.height / 2 + 60)
+
+    let direction: CGFloat = i % 2 == 0 ? -1.0 : 1.0
+    let initialRotationDegree = 3.0 * CGFloat(i / 2) * .pi / 180.0
+    let rotateTransform = CGAffineTransform.identity.rotated(by: direction * initialRotationDegree)
+    petalLayer.setAffineTransform(rotateTransform)
+    view.layer.addSublayer(petalLayer)
+
+    let rotationDegree = 12.0 * CGFloat(i / 2) * .pi / 180.0
+    petalLayer.lotus.runAnimation { make in
+        make.opacity.to(0.7).during(0.7).delay(1.0)
+    }.then { make in
+        make.rotation.to(direction * rotationDegree).during(0.6)
+    }.then { make in
+        make.scaling.to(1.2).delay(0.3).during(1.5).ease(.outElastic)
+    }
+}
+```
+
 ## Contents
 - [Getting started](#getting_started)
     - [Requirements](#requirements)
