@@ -6,7 +6,8 @@
 
 __Lotus__ – powerful nano framework that helps implement layer animation with easy syntax. This DSL relieves you from routine code of making animations via CoreAnimation.
 
-![Lotus](Example/Assets/lotus.gif)
+<img src="Example/Assets/lotus.gif" alt="Lotus" width="200"/>
+
 ```Swift
 for i in 0..<10 {
     let petalLayer = PetalLayer()
