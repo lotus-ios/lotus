@@ -21,7 +21,6 @@
 		9CED42F5231AE7D500642303 /* AnimatableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42F4231AE7D500642303 /* AnimatableItem.swift */; };
 		9CED42F7231AE85000642303 /* AnimationDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42F6231AE85000642303 /* AnimationDescription.swift */; };
 		9CED42F9231AE86F00642303 /* AnimationAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42F8231AE86F00642303 /* AnimationAttribute.swift */; };
-		9CED42FC231AE88900642303 /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42FB231AE88900642303 /* AnimationType.swift */; };
 		9CED42FE231AE89C00642303 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42FD231AE89C00642303 /* Animation.swift */; };
 		9CED4300231AE8C300642303 /* AnimationValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42FF231AE8C300642303 /* AnimationValue.swift */; };
 		9CED4302231AE90400642303 /* AnimationMakerAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED4301231AE90400642303 /* AnimationMakerAnimatable.swift */; };
@@ -59,7 +58,6 @@
 		9CED42F4231AE7D500642303 /* AnimatableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableItem.swift; sourceTree = "<group>"; };
 		9CED42F6231AE85000642303 /* AnimationDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDescription.swift; sourceTree = "<group>"; };
 		9CED42F8231AE86F00642303 /* AnimationAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationAttribute.swift; sourceTree = "<group>"; };
-		9CED42FB231AE88900642303 /* AnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
 		9CED42FD231AE89C00642303 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		9CED42FF231AE8C300642303 /* AnimationValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationValue.swift; sourceTree = "<group>"; };
 		9CED4301231AE90400642303 /* AnimationMakerAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationMakerAnimatable.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				9CC02C0323059C500058FAA5 /* Supporting files */,
-				9CED42FB231AE88900642303 /* AnimationType.swift */,
 				9CED4305231AE9C300642303 /* MotionType.swift */,
 				9CED4307231AE9CB00642303 /* ScaleType.swift */,
 				9C3F2A9023239C2500BAD2D2 /* EasingType.swift */,
@@ -263,7 +260,6 @@
 				9CED42E7231AE50500642303 /* UIView+AnimationLayerDSL.swift in Sources */,
 				9CED4306231AE9C300642303 /* MotionType.swift in Sources */,
 				9CED42ED231AE5C700642303 /* AnimationLayerDSL.swift in Sources */,
-				9CED42FC231AE88900642303 /* AnimationType.swift in Sources */,
 				9CED4308231AE9CB00642303 /* ScaleType.swift in Sources */,
 				9CED430A231AECD800642303 /* AnimationQueue.swift in Sources */,
 				9CED4302231AE90400642303 /* AnimationMakerAnimatable.swift in Sources */,
