@@ -70,8 +70,7 @@ final class AnimationResultTests: XCTestCase {
             $0.scaling.to(2.0)
         }
 
-        // TODO: change to scale after coreAnimation merge
-        XCTAssertEqual(item.position, CGPoint(x: 10.0, y: 10.0), "Scale should be changed after scaling animation.")
+        XCTAssertEqual(item.scale, 2.0, "Scale should be changed after scaling animation.")
     }
 
     func testRunWidthScalingAnimation() {
@@ -79,17 +78,15 @@ final class AnimationResultTests: XCTestCase {
             $0.scaling(.width).to(2.0)
         }
 
-        // TODO: change to scale after coreAnimation merge
-        XCTAssertEqual(item.position, CGPoint(x: 10.0, y: 10.0), "Scale should be changed after scaling animation.")
+        XCTAssertEqual(item.scaleX, 2.0, "Scale should be changed after scaling animation.")
     }
 
     func testRunHeightScalingAnimation() {
         layer.lotus.runAnimation {
-            $0.scaling.to(2.0)
+            $0.scaling(.height).to(2.0)
         }
 
-        // TODO: change to scale after coreAnimation merge
-        XCTAssertEqual(item.position, CGPoint(x: 10.0, y: 10.0), "Scale should be changed after scaling animation.")
+        XCTAssertEqual(item.scaleY, 2.0, "Scale should be changed after scaling animation.")
     }
 
     // MARK: - Rotation tests
@@ -99,8 +96,7 @@ final class AnimationResultTests: XCTestCase {
             $0.rotation.to(2.0 * .pi)
         }
 
-        // TODO: change to scale after coreAnimation merge
-        XCTAssertEqual(item.position, CGPoint(x: 10.0, y: 10.0), "Rotation should be changed after rotation animation.")
+        XCTAssertEqual(item.rotation, 2.0 * .pi, "Rotation should be changed after rotation animation.")
     }
 
     // MARK: - Opacity tests
@@ -110,7 +106,6 @@ final class AnimationResultTests: XCTestCase {
             $0.opacity.to(0.5)
         }
 
-        // TODO: change to scale after coreAnimation merge
-        XCTAssertEqual(item.position, CGPoint(x: 10.0, y: 10.0), "Opacity should be changed after opacity animation.")
+        XCTAssertEqual(item.alpha, 0.5, "Opacity should be changed after opacity animation.")
     }
 }
