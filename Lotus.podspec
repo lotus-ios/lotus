@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/vkondrashkov/lotus"
   s.license      = "MIT"
   s.author       = { "Vladislav Kondrashkov" => "vladislav.kondrashkov@gmail.com" }
-  s.source       = { :git => "https://github.com/vkondrashkov/lotus.git", :tag => '0.0.1' }
+  s.source       = { :git => "https://github.com/vkondrashkov/lotus.git", :tag => s.version.to_s }
   s.platform     = :ios, '10.0'
   s.swift_version = '5.0'
   s.source_files  = "Source/*.swift"

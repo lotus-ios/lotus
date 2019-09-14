@@ -9,53 +9,65 @@
 import UIKit
 
 public final class Animation {
-    let type: AnimationType
     let keyPath: String?
     let duration: AnimationValue
     let delay: AnimationValue
-    let value: AnimationValue
+    let fromValue: AnimationValue
+    let toValue: AnimationValue
+    let easingType: EasingType
     let path: CGPath?
 
     var coreAnimation: CAAnimation {
-        switch type {
-        case .scalar:
-            return prepareScalarAnimation()
-        case .vector:
-            return prepareVectorAnimation()
+        if path != nil {
+            return pathCoreAnimation()
+        } else {
+            return valueCoreAnimation()
         }
     }
 
-    init(type: AnimationType,
-         keyPath: String?,
+    init(keyPath: String?,
          duration: AnimationValue,
          delay: AnimationValue,
-         value: AnimationValue,
+         fromValue: AnimationValue,
+         toValue: AnimationValue,
+         easingType: EasingType,
          path: CGPath?) {
-        self.type = type
         self.keyPath = keyPath
         self.duration = duration
         self.delay = delay
-        self.value = value
+        self.fromValue = fromValue
+        self.toValue = toValue
+        self.easingType = easingType
         self.path = path
     }
 
-    func prepareScalarAnimation() -> CABasicAnimation {
-        let animation = CABasicAnimation(keyPath: keyPath)
+    func valueCoreAnimation() -> CAKeyframeAnimation {
+        let animation = CAKeyframeAnimation(keyPath: keyPath)
         animation.duration = duration as? CFTimeInterval ?? 0
-        animation.toValue = value
+        animation.values = EasingMaker().make(
+            fromValue: fromValue,
+            toValue: toValue,
+            easingType: easingType
+        )
         animation.beginTime = delay as? CFTimeInterval ?? 0
         animation.fillMode = .forwards
         animation.isRemovedOnCompletion = false
+        animation.timingFunction = easingType.isComplex ?
+            CAMediaTimingFunction(name: .linear) :
+            easingType.timingFunction
         return animation
     }
 
-    func prepareVectorAnimation() -> CAKeyframeAnimation {
+    func pathCoreAnimation() -> CAKeyframeAnimation {
         let animation = CAKeyframeAnimation(keyPath: keyPath)
         animation.duration = duration as? CFTimeInterval ?? 0
         animation.path = path
         animation.beginTime = delay as? CFTimeInterval ?? 0
         animation.fillMode = .forwards
         animation.isRemovedOnCompletion = false
+        animation.timingFunction = easingType.isComplex ?
+            CAMediaTimingFunction(name: .linear) :
+            easingType.timingFunction
         return animation
     }
 }
