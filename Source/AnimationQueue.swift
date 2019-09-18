@@ -1,5 +1,5 @@
 //
-//  AnimationMakerQueue.swift
+//  AnimationQueue.swift
 //  Lotus
 //
 //  Created by Vladislav Kondrashkov on 9/18/19.
