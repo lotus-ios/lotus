@@ -2,37 +2,40 @@
 //  AnimationQueue.swift
 //  Lotus
 //
-//  Created by Vladislav Kondrashkov on 8/31/19.
+//  Created by Vladislav Kondrashkov on 9/18/19.
 //  Copyright © 2019 Vladislav Kondrashkov. All rights reserved.
 //
 
 final class AnimationQueue: NSObject {
     private let layer: CALayer
-    private var animations: [CAAnimationGroup] = []
+    private var closures: [(AnimationMaker) -> Void] = []
 
     init(layer: CALayer) {
         self.layer = layer
-        super.init()
     }
 
     func run() {
-        guard let animation = self.pop() else {
+        guard let closure = dequeue() else {
             return
         }
-        animation.delegate = self
-        layer.add(animation, forKey: nil)
+        let animationGroup = AnimationMaker.makeAnimation(item: layer, closure: closure)
+        animationGroup.delegate = self
+        layer.add(animationGroup, forKey: nil)
     }
 
-    func push(_ animation: CAAnimationGroup) {
-        animations.append(animation)
+    func enqueue(_ closure: ((AnimationMaker) -> Void)?) {
+        guard let closure = closure else {
+            return
+        }
+        closures.append(closure)
     }
 
     @discardableResult
-    func pop() -> CAAnimationGroup? {
-        guard animations.count > 0 else {
+    func dequeue() -> ((AnimationMaker) -> Void)? {
+        guard closures.count > 0 else {
             return nil
         }
-        return animations.removeFirst()
+        return closures.removeFirst()
     }
 }
 
