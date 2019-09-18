@@ -8,16 +8,16 @@
 
 public struct AnimationLayerChainDSL {
     let layer: CALayer
-    let animationMakerQueue: AnimationMakerQueue
+    let animationQueue: AnimationQueue
 
-    init(layer: CALayer, animationMakerQueue: AnimationMakerQueue) {
+    init(layer: CALayer, animationQueue: AnimationQueue) {
         self.layer = layer
-        self.animationMakerQueue = animationMakerQueue
+        self.animationQueue = animationQueue
     }
 
     @discardableResult
     public func then(_ closure: @escaping (AnimationMaker) -> Void) -> AnimationLayerChainDSL {
-        animationMakerQueue.push(closure)
-        return AnimationLayerChainDSL(layer: layer, animationMakerQueue: animationMakerQueue)
+        animationQueue.enqueue(closure)
+        return AnimationLayerChainDSL(layer: layer, animationQueue: animationQueue)
     }
 }

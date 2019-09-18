@@ -10,7 +10,7 @@
 		9C3F2A9123239C2500BAD2D2 /* EasingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9023239C2500BAD2D2 /* EasingType.swift */; };
 		9C3F2A9323239F2700BAD2D2 /* EasingMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */; };
 		9C3F2A952323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */; };
-		9CA33F9623323D4200B2CE55 /* AnimationMakerQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA33F9523323D4200B2CE55 /* AnimationMakerQueue.swift */; };
+		9CA33F9623323D4200B2CE55 /* AnimationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA33F9523323D4200B2CE55 /* AnimationQueue.swift */; };
 		9CC02BF123059B570058FAA5 /* Lotus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC02BE723059B570058FAA5 /* Lotus.framework */; };
 		9CC02BF623059B570058FAA5 /* LotusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC02BF523059B570058FAA5 /* LotusTests.swift */; };
 		9CC02BF823059B570058FAA5 /* Lotus.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CC02BEA23059B570058FAA5 /* Lotus.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,7 +44,7 @@
 		9C3F2A9023239C2500BAD2D2 /* EasingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingType.swift; sourceTree = "<group>"; };
 		9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingMaker.swift; sourceTree = "<group>"; };
 		9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EasingType+CAMediaTimingFunction.swift"; sourceTree = "<group>"; };
-		9CA33F9523323D4200B2CE55 /* AnimationMakerQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationMakerQueue.swift; sourceTree = "<group>"; };
+		9CA33F9523323D4200B2CE55 /* AnimationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationQueue.swift; sourceTree = "<group>"; };
 		9CC02BE723059B570058FAA5 /* Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC02BEA23059B570058FAA5 /* Lotus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lotus.h; sourceTree = "<group>"; };
 		9CC02BEB23059B570058FAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 				9CED4307231AE9CB00642303 /* ScaleType.swift */,
 				9C3F2A9023239C2500BAD2D2 /* EasingType.swift */,
 				9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */,
-				9CA33F9523323D4200B2CE55 /* AnimationMakerQueue.swift */,
+				9CA33F9523323D4200B2CE55 /* AnimationQueue.swift */,
 				9CED42FD231AE89C00642303 /* Animation.swift */,
 				9CED42F6231AE85000642303 /* AnimationDescription.swift */,
 				9CED42F8231AE86F00642303 /* AnimationAttribute.swift */,
@@ -263,7 +263,7 @@
 				9CED4308231AE9CB00642303 /* ScaleType.swift in Sources */,
 				9CED4302231AE90400642303 /* AnimationMakerAnimatable.swift in Sources */,
 				9C3F2A9123239C2500BAD2D2 /* EasingType.swift in Sources */,
-				9CA33F9623323D4200B2CE55 /* AnimationMakerQueue.swift in Sources */,
+				9CA33F9623323D4200B2CE55 /* AnimationQueue.swift in Sources */,
 				9CED42F1231AE78D00642303 /* AnimationMaker.swift in Sources */,
 				9C3F2A9323239F2700BAD2D2 /* EasingMaker.swift in Sources */,
 				9CED42F7231AE85000642303 /* AnimationDescription.swift in Sources */,

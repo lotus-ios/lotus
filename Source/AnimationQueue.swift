@@ -6,7 +6,7 @@
 //  Copyright © 2019 Vladislav Kondrashkov. All rights reserved.
 //
 
-final class AnimationMakerQueue: NSObject {
+final class AnimationQueue: NSObject {
     private let layer: CALayer
     private var closures: [(AnimationMaker) -> Void] = []
 
@@ -15,7 +15,7 @@ final class AnimationMakerQueue: NSObject {
     }
 
     func run() {
-        guard let closure = pop() else {
+        guard let closure = dequeue() else {
             return
         }
         let animationGroup = AnimationMaker.makeAnimation(item: layer, closure: closure)
@@ -23,7 +23,7 @@ final class AnimationMakerQueue: NSObject {
         layer.add(animationGroup, forKey: nil)
     }
 
-    func push(_ closure: ((AnimationMaker) -> Void)?) {
+    func enqueue(_ closure: ((AnimationMaker) -> Void)?) {
         guard let closure = closure else {
             return
         }
@@ -31,7 +31,7 @@ final class AnimationMakerQueue: NSObject {
     }
 
     @discardableResult
-    func pop() -> ((AnimationMaker) -> Void)? {
+    func dequeue() -> ((AnimationMaker) -> Void)? {
         guard closures.count > 0 else {
             return nil
         }
@@ -40,7 +40,7 @@ final class AnimationMakerQueue: NSObject {
 }
 
 // MARK: - CAAnimationDelegate implementation
-extension AnimationMakerQueue: CAAnimationDelegate {
+extension AnimationQueue: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         run()
     }
