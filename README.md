@@ -1,8 +1,10 @@
 # Lotus
+![Language](https://img.shields.io/badge/swift-5-orange.svg)
 [![Build Status](https://travis-ci.org/vkondrashkov/lotus.svg?branch=develop)](https://travis-ci.org/vkondrashkov/lotus)
 [![codecov](https://codecov.io/gh/vkondrashkov/lotus/branch/develop/graph/badge.svg)](https://codecov.io/gh/vkondrashkov/lotus)
-![Language](https://img.shields.io/badge/swift-5-orange.svg)
-[![License](https://img.shields.io/github/license/vkondrashkov/lotus.svg)](https://github.com/vkondrashkov/lotus/blob/develop/LICENSE)
+[![Version](https://img.shields.io/cocoapods/v/Lotus.svg?style=flat)](http://cocoapods.org/pods/Lotus)
+[![License](https://img.shields.io/cocoapods/l/Lotus.svg?style=flat)](http://cocoapods.org/pods/Lotus)
+[![Platform](https://img.shields.io/cocoapods/p/Lotus.svg?style=flat)](http://cocoapods.org/pods/Lotus)
 
 __Lotus__ – powerful nano framework that helps implement layer animation with easy syntax. This DSL relieves you from routine code of making animations via CoreAnimation.
 
