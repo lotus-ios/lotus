@@ -99,6 +99,7 @@ Coming soon!
 
 ## Authors
 - __Vladislav Kondrashkov__ - _Initial work_ - [vkondrashkov](https://github.com/vkondrashkov "Vladislav Kondrashkov")
+- __Pavel Kondrashkov__ - _Mentor, idea contributor_ - [pkondrashkov](https://github.com/pkondrashkov "Pavel Kondrashkov")
 
 See also the list of [contributors](https://github.com/vkondrashkov/lotus/graphs/contributors "Contributors") who participated in this project.
 
