@@ -19,23 +19,16 @@ public protocol AnimatableItem: AnyObject {
 
 extension CALayer: AnimatableItem {
     public var scale: CGFloat {
-        let presentationLayer = self.presentation() ?? self
-        _ = presentationLayer.affineTransform()
-        /// For some reason scale animation doesn't change matrix
-        /// and even resets it to .identity
-        /// return sqrt(transform.a * transform.a + transform.c * transform.c)
-        return 1.0
+        return sqrt(transform.m11 + transform.m22)
     }
 
     public var scaleX: CGFloat {
-        let presentationLayer = self.presentation() ?? self
-        let transform = presentationLayer.affineTransform()
+        let transform = affineTransform()
         return transform.a
     }
 
     public var scaleY: CGFloat {
-        let presentationLayer = self.presentation() ?? self
-        let transform = presentationLayer.affineTransform()
+        let transform = affineTransform()
         return transform.d
     }
 
@@ -44,8 +37,7 @@ extension CALayer: AnimatableItem {
     }
 
     public var rotation: CGFloat {
-        let presentationLayer = self.presentation() ?? self
-        let transform = presentationLayer.affineTransform()
+        let transform = affineTransform()
         return CGFloat(atan2f(Float(transform.b), Float(transform.a)))
     }
 }
