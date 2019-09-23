@@ -11,6 +11,6 @@ install:
 
 script:
  - bundle exec pod install
- - set -o pipefail && xcodebuild -scheme LotusTests -workspace Lotus.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=12.0' build test | xcpretty --color
+ - set -o pipefail && xcodebuild -scheme Lotus -workspace Lotus.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=12.0' build test | xcpretty --color
 after_success:
  - bash <(curl -s https://codecov.io/bash)
