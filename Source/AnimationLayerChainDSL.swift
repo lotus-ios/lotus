@@ -16,9 +16,8 @@ public struct AnimationLayerChainDSL {
     }
 
     @discardableResult
-    public func then(_ closure: (AnimationMaker) -> Void) -> AnimationLayerChainDSL {
-        let animationGroup = AnimationMaker.makeAnimation(item: layer, closure: closure)
-        animationQueue.push(animationGroup)
+    public func then(_ closure: @escaping (AnimationMaker) -> Void) -> AnimationLayerChainDSL {
+        animationQueue.enqueue(closure)
         return AnimationLayerChainDSL(layer: layer, animationQueue: animationQueue)
     }
 }
