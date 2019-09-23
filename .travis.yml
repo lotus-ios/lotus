@@ -6,7 +6,11 @@ cache:
  - bundler
  - cocoapods
 
+install:
+ - bundle install --path vendor/bundle
+
 script:
-  - set -o pipefail && xcodebuild -scheme Lotus -project Lotus.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=12.0' build test | xcpretty --color
+ - bundle exec pod install
+ - set -o pipefail && xcodebuild -scheme LotusTests -workspace Lotus.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=12.0' build test | xcpretty --color
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+ - bash <(curl -s https://codecov.io/bash)
