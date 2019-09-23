@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		986ED29BB5C88BD4B35879A1 /* Pods_Lotus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636AC66502FA79E313A2FE8B /* Pods_Lotus.framework */; };
 		9C3F2A9123239C2500BAD2D2 /* EasingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9023239C2500BAD2D2 /* EasingType.swift */; };
 		9C3F2A9323239F2700BAD2D2 /* EasingMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */; };
 		9C3F2A952323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */; };
-		9CA33F9623323D4200B2CE55 /* AnimationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA33F9523323D4200B2CE55 /* AnimationQueue.swift */; };
 		9C79AF3A646BF57405330258 /* Pods_LotusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4151B8F54EEB9C565FFF9981 /* Pods_LotusTests.framework */; };
+		9CA33F9623323D4200B2CE55 /* AnimationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA33F9523323D4200B2CE55 /* AnimationQueue.swift */; };
 		9CC02BF123059B570058FAA5 /* Lotus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC02BE723059B570058FAA5 /* Lotus.framework */; };
 		9CC02BF623059B570058FAA5 /* AnimationResultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC02BF523059B570058FAA5 /* AnimationResultSpec.swift */; };
 		9CC02BF823059B570058FAA5 /* Lotus.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CC02BEA23059B570058FAA5 /* Lotus.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,7 +45,10 @@
 /* Begin PBXFileReference section */
 		4151B8F54EEB9C565FFF9981 /* Pods_LotusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LotusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A97CCC06CA3E2540755F2F2 /* Pods-LotusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LotusTests.debug.xcconfig"; path = "Target Support Files/Pods-LotusTests/Pods-LotusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5C71E51EE07458A9A35EC6E9 /* Pods-Lotus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotus.debug.xcconfig"; path = "Target Support Files/Pods-Lotus/Pods-Lotus.debug.xcconfig"; sourceTree = "<group>"; };
+		636AC66502FA79E313A2FE8B /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8111AB88058A304A886FDFD6 /* Pods-LotusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LotusTests.release.xcconfig"; path = "Target Support Files/Pods-LotusTests/Pods-LotusTests.release.xcconfig"; sourceTree = "<group>"; };
+		83A9660BD9B2F788733B4C76 /* Pods-Lotus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotus.release.xcconfig"; path = "Target Support Files/Pods-Lotus/Pods-Lotus.release.xcconfig"; sourceTree = "<group>"; };
 		9C3F2A9023239C2500BAD2D2 /* EasingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingType.swift; sourceTree = "<group>"; };
 		9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingMaker.swift; sourceTree = "<group>"; };
 		9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EasingType+CAMediaTimingFunction.swift"; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				986ED29BB5C88BD4B35879A1 /* Pods_Lotus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				4151B8F54EEB9C565FFF9981 /* Pods_LotusTests.framework */,
+				636AC66502FA79E313A2FE8B /* Pods_Lotus.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -104,6 +110,8 @@
 			children = (
 				5A97CCC06CA3E2540755F2F2 /* Pods-LotusTests.debug.xcconfig */,
 				8111AB88058A304A886FDFD6 /* Pods-LotusTests.release.xcconfig */,
+				5C71E51EE07458A9A35EC6E9 /* Pods-Lotus.debug.xcconfig */,
+				83A9660BD9B2F788733B4C76 /* Pods-Lotus.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -190,6 +198,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CC02BFB23059B570058FAA5 /* Build configuration list for PBXNativeTarget "Lotus" */;
 			buildPhases = (
+				1BADCFC74A82609A76ABEA22 /* [CP] Check Pods Manifest.lock */,
 				9CC02BE223059B570058FAA5 /* Headers */,
 				9CC02BE323059B570058FAA5 /* Sources */,
 				9CC02BE423059B570058FAA5 /* Frameworks */,
@@ -279,6 +288,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1BADCFC74A82609A76ABEA22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lotus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1EE52B76CC111EB35E29D35F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -489,6 +520,7 @@
 		};
 		9CC02BFC23059B570058FAA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C71E51EE07458A9A35EC6E9 /* Pods-Lotus.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -516,6 +548,7 @@
 		};
 		9CC02BFD23059B570058FAA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83A9660BD9B2F788733B4C76 /* Pods-Lotus.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
