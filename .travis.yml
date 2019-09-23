@@ -9,11 +9,7 @@ cache:
 install:
  - bundle install --path vendor/bundle
 
-before_script:
- - bundle exec pod repo update
-
 script:
- - bundle exec pod deintegrate
  - bundle exec pod install
  - set -o pipefail && xcodebuild -scheme Lotus -workspace Lotus.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=12.0' build test | xcpretty --color
 after_success:
