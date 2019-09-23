@@ -19,7 +19,7 @@ public protocol AnimatableItem: AnyObject {
 
 extension CALayer: AnimatableItem {
     public var scale: CGFloat {
-        return sqrt(transform.m11 + transform.m22)
+        return sqrt(transform.m11 * transform.m22)
     }
 
     public var scaleX: CGFloat {
