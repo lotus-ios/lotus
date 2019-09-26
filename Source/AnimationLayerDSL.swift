@@ -12,7 +12,7 @@ public struct AnimationLayerDSL {
 
     init(layer: CALayer) {
         self.layer = layer
-        self.animationQueue = AnimationQueue(layer: layer)
+        animationQueue = AnimationQueue(layer: layer)
     }
 
     @discardableResult

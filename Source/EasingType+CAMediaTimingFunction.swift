@@ -9,7 +9,7 @@
 extension EasingType {
     var timingFunction: CAMediaTimingFunction? {
         switch self {
-        case .custom(let timingFunction):
+        case let .custom(timingFunction):
             return timingFunction
         case .linear:
             return CAMediaTimingFunction(name: .linear)

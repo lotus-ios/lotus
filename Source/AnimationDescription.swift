@@ -17,14 +17,14 @@ public final class AnimationDescription {
     var fromValue: AnimationValue = 0.0
     var toValue: AnimationValue = 0.0
     var easingType: EasingType = .linear
-    var path: CGPath? = nil
+    var path: CGPath?
 
     var keyPath: String {
         return attribute.rawValue
     }
 
     lazy var animation: Animation = {
-        return Animation(
+        Animation(
             keyPath: keyPath,
             duration: duration,
             delay: delay,
