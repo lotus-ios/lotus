@@ -61,7 +61,7 @@ public final class AnimationMaker {
     }
 
     // TODO: need to change property after animation completion
-    /// to make animation sequences relatively to each other
+    // to make animation sequences relatively to each other
     static func makeAnimation(item: CALayer, closure: (AnimationMaker) -> Void) -> CAAnimationGroup {
         let animations = prepareAnimations(item: item, closure: closure)
         let animationGroup = CAAnimationGroup()
