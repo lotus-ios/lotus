@@ -1,0 +1,4 @@
+--stripunusedargs closure-only
+--patternlet inline
+--commas inline
+--ranges no-space
