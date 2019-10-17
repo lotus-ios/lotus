@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8672419A23585A7B0039A018 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672419923585A7B0039A018 /* Foundation.framework */; };
 		8672419B23585A8A0039A018 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672419923585A7B0039A018 /* Foundation.framework */; };
+		8A3C7D79F2BCC263605794B9 /* Pods_Lotus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F8388880E9A99F45C0D129 /* Pods_Lotus.framework */; };
 		9C3F2A9123239C2500BAD2D2 /* EasingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9023239C2500BAD2D2 /* EasingType.swift */; };
 		9C3F2A9323239F2700BAD2D2 /* EasingMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */; };
 		9C3F2A952323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */; };
@@ -76,6 +77,7 @@
 		A8EBB3E67FCC97C1D6F3A1D1 /* Pods-LotusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LotusTests.debug.xcconfig"; path = "Target Support Files/Pods-LotusTests/Pods-LotusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B116D683D0EA7A314F61C73B /* Pods-LotusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LotusTests.release.xcconfig"; path = "Target Support Files/Pods-LotusTests/Pods-LotusTests.release.xcconfig"; sourceTree = "<group>"; };
 		BE614C0AC76833DDDEADAB4E /* Pods_LotusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LotusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8F8388880E9A99F45C0D129 /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			files = (
 				8672419B23585A8A0039A018 /* Foundation.framework in Frameworks */,
 				FBD616BBAC7F048FE83462C1 /* Pods_Lotus.framework in Frameworks */,
+				8A3C7D79F2BCC263605794B9 /* Pods_Lotus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,11 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CC02BFB23059B570058FAA5 /* Build configuration list for PBXNativeTarget "Lotus" */;
 			buildPhases = (
-				8A6F2AA67F3F53536D76194A /* [CP] Check Pods Manifest.lock */,
+				7C74BA73FB910CBA5828D3FA /* [CP] Check Pods Manifest.lock */,
 				9CC02BE223059B570058FAA5 /* Headers */,
 				9CC02BE323059B570058FAA5 /* Sources */,
 				9CC02BE423059B570058FAA5 /* Frameworks */,
 				9CC02BE523059B570058FAA5 /* Resources */,
+				9C972F1E233CB9E5006D73AB /* SwiftFormat */,
 			);
 			buildRules = (
 			);
@@ -223,11 +227,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CC02BFE23059B570058FAA5 /* Build configuration list for PBXNativeTarget "LotusTests" */;
 			buildPhases = (
-				090572879019A11A4C35E398 /* [CP] Check Pods Manifest.lock */,
+				4CF91C642183D1F59C23C9B6 /* [CP] Check Pods Manifest.lock */,
 				9CC02BEC23059B570058FAA5 /* Sources */,
 				9CC02BED23059B570058FAA5 /* Frameworks */,
 				9CC02BEE23059B570058FAA5 /* Resources */,
-				8BFB78A684766FEF065B1405 /* [CP] Embed Pods Frameworks */,
+				26E3F2923A1588C35B32A4EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,7 +298,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		090572879019A11A4C35E398 /* [CP] Check Pods Manifest.lock */ = {
+		26E3F2923A1588C35B32A4EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LotusTests/Pods-LotusTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LotusTests/Pods-LotusTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LotusTests/Pods-LotusTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CF91C642183D1F59C23C9B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -316,7 +337,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8A6F2AA67F3F53536D76194A /* [CP] Check Pods Manifest.lock */ = {
+		7C74BA73FB910CBA5828D3FA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -338,22 +359,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8BFB78A684766FEF065B1405 /* [CP] Embed Pods Frameworks */ = {
+		9C972F1E233CB9E5006D73AB /* SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LotusTests/Pods-LotusTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+			);
+			name = SwiftFormat;
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LotusTests/Pods-LotusTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LotusTests/Pods-LotusTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/Source/\" --config \"${SRCROOT}/.swiftformat\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

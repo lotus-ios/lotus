@@ -23,8 +23,8 @@ final class EasingMaker {
               easingType: EasingType) -> [CGFloat] {
         guard let fromValue = fromValue as? CGFloat,
             let toValue = toValue as? CGFloat else {
-                assertionFailure("Can't make timing function! Given wrong type!")
-                return []
+            assertionFailure("Can't make timing function! Given wrong type!")
+            return []
         }
         switch easingType {
         case .inElastic:
@@ -40,6 +40,7 @@ final class EasingMaker {
 }
 
 // MARK: - Elastic
+
 private extension EasingMaker {
     func inElastic(fromValue: CGFloat, toValue: CGFloat) -> [CGFloat] {
         return [
@@ -94,4 +95,3 @@ private extension EasingMaker {
         ]
     }
 }
-

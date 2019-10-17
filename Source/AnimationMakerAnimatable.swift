@@ -27,6 +27,6 @@ public final class AnimationMakerAnimatable {
         } else {
             description.toValue = value
         }
-        return AnimationMakerEditable(description: self.description)
+        return AnimationMakerEditable(description: description)
     }
 }

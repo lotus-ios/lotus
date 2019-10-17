@@ -6,6 +6,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'Lotus' do
+  pod 'SwiftFormat/CLI'
 end
 
 target 'LotusTests' do

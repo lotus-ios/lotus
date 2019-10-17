@@ -40,6 +40,7 @@ final class AnimationQueue: NSObject {
 }
 
 // MARK: - CAAnimationDelegate implementation
+
 extension AnimationQueue: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         /// Synchronizing Presentation tree with Model tree

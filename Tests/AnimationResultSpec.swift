@@ -49,8 +49,8 @@ final class AnimationResultSpec: QuickSpec {
 
                 waitUntil(timeout: 0.5) { done in
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.position.x).to(beCloseTo(15.0))
-                        expect(item.position.y).to(beCloseTo(25.0))
+                        expect(item.position.x).to(beCloseTo(15.0, within: 0.01))
+                        expect(item.position.y).to(beCloseTo(25.0, within: 0.01))
                         done()
                     }
                 }
@@ -72,12 +72,12 @@ final class AnimationResultSpec: QuickSpec {
             it("vertical motion animation") {
                 layer.lotus.runAnimation {
                     $0.motion(.vertical).to(27.03).during(0.01)
+                }
 
-                    waitUntil(timeout: 0.5) { done in
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                            expect(item.position.y).to(beCloseTo(27.03))
-                            done()
-                        }
+                waitUntil(timeout: 0.5) { done in
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                        expect(item.position.y).to(beCloseTo(27.03))
+                        done()
                     }
                 }
             }
@@ -160,7 +160,7 @@ final class AnimationResultSpec: QuickSpec {
 
                 waitUntil(timeout: 0.5) { done in
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.alpha).to(beCloseTo(0.01))
+                        expect(item.alpha).to(beCloseTo(0.7, within: 0.01))
                         done()
                     }
                 }

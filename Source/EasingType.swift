@@ -8,7 +8,7 @@
 
 public enum EasingType {
     var isComplex: Bool {
-        return self.timingFunction == nil
+        return timingFunction == nil
     }
 
     case custom(CAMediaTimingFunction)

@@ -10,6 +10,6 @@ import UIKit
 
 public extension UIView {
     var lotus: AnimationLayerDSL {
-        return self.layer.lotus
+        return layer.lotus
     }
 }
