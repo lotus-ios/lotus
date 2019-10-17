@@ -12,6 +12,9 @@ language: swift
 # install:
 #   - bundle exec pod install --repo-update
 
+before_install:
+  - gem install cocoapods
+
 script:
   - pod install
   - set -o pipefail && xcodebuild -scheme Lotus \
