@@ -528,7 +528,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 28F67D8854D85ACD18C5FFBB /* Pods-Lotus.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -557,7 +557,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A28C71407428CA1F21093436 /* Pods-Lotus.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -585,7 +585,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A8EBB3E67FCC97C1D6F3A1D1 /* Pods-LotusTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 638H9B3B32;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -605,7 +605,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B116D683D0EA7A314F61C73B /* Pods-LotusTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 638H9B3B32;
 				INFOPLIST_FILE = Tests/Info.plist;
