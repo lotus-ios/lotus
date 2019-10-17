@@ -2,17 +2,22 @@ os: osx
 osx_image: xcode10.2
 language: swift
 
-cache:
- - bundler
- - cocoapods
+# cache:
+#  - bundler
+#  - cocoapods
 
-before_install:
- - bundle install --path vendor/bundle
+# before_install:
+#   - bundle install --path vendor/bundle
 
-install:
- - bundle exec pod install --repo-update
+# install:
+#   - bundle exec pod install --repo-update
 
 script:
- - set -o pipefail && xcodebuild -scheme Lotus -workspace Lotus.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=12.0' build test | xcpretty --color
+  - pod install
+  - set -o pipefail && xcodebuild -scheme Lotus \
+    -workspace Lotus.xcworkspace \
+    -sdk iphonesimulator \
+    -destination 'platform=iOS Simulator,name=iPhone 6,OS=12.0' \
+    build test | xcpretty --color
 after_success:
- - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash)
