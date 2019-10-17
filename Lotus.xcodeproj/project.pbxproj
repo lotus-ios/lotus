@@ -3,17 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8672419A23585A7B0039A018 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672419923585A7B0039A018 /* Foundation.framework */; };
+		8672419B23585A8A0039A018 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672419923585A7B0039A018 /* Foundation.framework */; };
 		8A3C7D79F2BCC263605794B9 /* Pods_Lotus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F8388880E9A99F45C0D129 /* Pods_Lotus.framework */; };
 		9C3F2A9123239C2500BAD2D2 /* EasingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9023239C2500BAD2D2 /* EasingType.swift */; };
 		9C3F2A9323239F2700BAD2D2 /* EasingMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */; };
 		9C3F2A952323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */; };
 		9CA33F9623323D4200B2CE55 /* AnimationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA33F9523323D4200B2CE55 /* AnimationQueue.swift */; };
 		9CC02BF123059B570058FAA5 /* Lotus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC02BE723059B570058FAA5 /* Lotus.framework */; };
-		9CC02BF623059B570058FAA5 /* LotusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC02BF523059B570058FAA5 /* LotusTests.swift */; };
+		9CC02BF623059B570058FAA5 /* AnimationResultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC02BF523059B570058FAA5 /* AnimationResultSpec.swift */; };
 		9CC02BF823059B570058FAA5 /* Lotus.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CC02BEA23059B570058FAA5 /* Lotus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CED42E7231AE50500642303 /* UIView+AnimationLayerDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42E6231AE50500642303 /* UIView+AnimationLayerDSL.swift */; };
 		9CED42EB231AE55600642303 /* CALayer+AnimationLayerDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED42EA231AE55600642303 /* CALayer+AnimationLayerDSL.swift */; };
@@ -29,6 +31,8 @@
 		9CED4304231AE92C00642303 /* AnimationMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED4303231AE92C00642303 /* AnimationMakerEditable.swift */; };
 		9CED4306231AE9C300642303 /* MotionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED4305231AE9C300642303 /* MotionType.swift */; };
 		9CED4308231AE9CB00642303 /* ScaleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED4307231AE9CB00642303 /* ScaleType.swift */; };
+		E1BEAF03619E47B82B5D4B38 /* Pods_LotusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE614C0AC76833DDDEADAB4E /* Pods_LotusTests.framework */; };
+		FBD616BBAC7F048FE83462C1 /* Pods_Lotus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336872AFC0881FB7A36496D5 /* Pods_Lotus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28F67D8854D85ACD18C5FFBB /* Pods-Lotus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotus.debug.xcconfig"; path = "Target Support Files/Pods-Lotus/Pods-Lotus.debug.xcconfig"; sourceTree = "<group>"; };
+		336872AFC0881FB7A36496D5 /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8672419923585A7B0039A018 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C24D562FD5247B835E2E3DF /* Pods-Lotus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotus.release.xcconfig"; path = "Target Support Files/Pods-Lotus/Pods-Lotus.release.xcconfig"; sourceTree = "<group>"; };
 		9C3F2A9023239C2500BAD2D2 /* EasingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingType.swift; sourceTree = "<group>"; };
 		9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingMaker.swift; sourceTree = "<group>"; };
@@ -51,7 +58,7 @@
 		9CC02BEA23059B570058FAA5 /* Lotus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lotus.h; sourceTree = "<group>"; };
 		9CC02BEB23059B570058FAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CC02BF023059B570058FAA5 /* LotusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LotusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CC02BF523059B570058FAA5 /* LotusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusTests.swift; sourceTree = "<group>"; };
+		9CC02BF523059B570058FAA5 /* AnimationResultSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationResultSpec.swift; sourceTree = "<group>"; };
 		9CC02BF723059B570058FAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CC636335E2133DF31AF3438 /* Pods-Lotus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotus.debug.xcconfig"; path = "Target Support Files/Pods-Lotus/Pods-Lotus.debug.xcconfig"; sourceTree = "<group>"; };
 		9CED42E6231AE50500642303 /* UIView+AnimationLayerDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationLayerDSL.swift"; sourceTree = "<group>"; };
@@ -68,6 +75,10 @@
 		9CED4303231AE92C00642303 /* AnimationMakerEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationMakerEditable.swift; sourceTree = "<group>"; };
 		9CED4305231AE9C300642303 /* MotionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionType.swift; sourceTree = "<group>"; };
 		9CED4307231AE9CB00642303 /* ScaleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleType.swift; sourceTree = "<group>"; };
+		A28C71407428CA1F21093436 /* Pods-Lotus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotus.release.xcconfig"; path = "Target Support Files/Pods-Lotus/Pods-Lotus.release.xcconfig"; sourceTree = "<group>"; };
+		A8EBB3E67FCC97C1D6F3A1D1 /* Pods-LotusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LotusTests.debug.xcconfig"; path = "Target Support Files/Pods-LotusTests/Pods-LotusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B116D683D0EA7A314F61C73B /* Pods-LotusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LotusTests.release.xcconfig"; path = "Target Support Files/Pods-LotusTests/Pods-LotusTests.release.xcconfig"; sourceTree = "<group>"; };
+		BE614C0AC76833DDDEADAB4E /* Pods_LotusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LotusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F8388880E9A99F45C0D129 /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8672419B23585A8A0039A018 /* Foundation.framework in Frameworks */,
+				FBD616BBAC7F048FE83462C1 /* Pods_Lotus.framework in Frameworks */,
 				8A3C7D79F2BCC263605794B9 /* Pods_Lotus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,28 +97,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8672419A23585A7B0039A018 /* Foundation.framework in Frameworks */,
 				9CC02BF123059B570058FAA5 /* Lotus.framework in Frameworks */,
+				E1BEAF03619E47B82B5D4B38 /* Pods_LotusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		108069E8BE3586EF0C0B5DFD /* Pods */ = {
+		25EE50F1C3FDDD04479ADBE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9CC636335E2133DF31AF3438 /* Pods-Lotus.debug.xcconfig */,
-				9C24D562FD5247B835E2E3DF /* Pods-Lotus.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		870E5C8C89ED45396C1515DB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D8F8388880E9A99F45C0D129 /* Pods_Lotus.framework */,
+				8672419923585A7B0039A018 /* Foundation.framework */,
+				336872AFC0881FB7A36496D5 /* Pods_Lotus.framework */,
+				BE614C0AC76833DDDEADAB4E /* Pods_LotusTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		954BD6E518DB81A6ACBC3D77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28F67D8854D85ACD18C5FFBB /* Pods-Lotus.debug.xcconfig */,
+				A28C71407428CA1F21093436 /* Pods-Lotus.release.xcconfig */,
+				A8EBB3E67FCC97C1D6F3A1D1 /* Pods-LotusTests.debug.xcconfig */,
+				B116D683D0EA7A314F61C73B /* Pods-LotusTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		9CC02BDD23059B570058FAA5 = {
@@ -114,8 +133,8 @@
 				9CC02C0223059C2E0058FAA5 /* Source */,
 				9CC02BF423059B570058FAA5 /* Tests */,
 				9CC02BE823059B570058FAA5 /* Products */,
-				108069E8BE3586EF0C0B5DFD /* Pods */,
-				870E5C8C89ED45396C1515DB /* Frameworks */,
+				954BD6E518DB81A6ACBC3D77 /* Pods */,
+				25EE50F1C3FDDD04479ADBE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,7 +150,7 @@
 		9CC02BF423059B570058FAA5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				9CC02BF523059B570058FAA5 /* LotusTests.swift */,
+				9CC02BF523059B570058FAA5 /* AnimationResultSpec.swift */,
 				9CC02BF723059B570058FAA5 /* Info.plist */,
 			);
 			path = Tests;
@@ -190,7 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CC02BFB23059B570058FAA5 /* Build configuration list for PBXNativeTarget "Lotus" */;
 			buildPhases = (
-				B9DEE8B50E4546ED98D2361B /* [CP] Check Pods Manifest.lock */,
+				8A6F2AA67F3F53536D76194A /* [CP] Check Pods Manifest.lock */,
 				9CC02BE223059B570058FAA5 /* Headers */,
 				9CC02BE323059B570058FAA5 /* Sources */,
 				9CC02BE423059B570058FAA5 /* Frameworks */,
@@ -210,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CC02BFE23059B570058FAA5 /* Build configuration list for PBXNativeTarget "LotusTests" */;
 			buildPhases = (
+				090572879019A11A4C35E398 /* [CP] Check Pods Manifest.lock */,
 				9CC02BEC23059B570058FAA5 /* Sources */,
 				9CC02BED23059B570058FAA5 /* Frameworks */,
 				9CC02BEE23059B570058FAA5 /* Resources */,
+				8BFB78A684766FEF065B1405 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -351,7 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CC02BF623059B570058FAA5 /* LotusTests.swift in Sources */,
+				9CC02BF623059B570058FAA5 /* AnimationResultSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -476,7 +497,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -490,8 +511,9 @@
 		};
 		9CC02BFC23059B570058FAA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CC636335E2133DF31AF3438 /* Pods-Lotus.debug.xcconfig */;
+			baseConfigurationReference = 28F67D8854D85ACD18C5FFBB /* Pods-Lotus.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -518,8 +540,9 @@
 		};
 		9CC02BFD23059B570058FAA5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C24D562FD5247B835E2E3DF /* Pods-Lotus.release.xcconfig */;
+			baseConfigurationReference = A28C71407428CA1F21093436 /* Pods-Lotus.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -545,8 +568,9 @@
 		};
 		9CC02BFF23059B570058FAA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8EBB3E67FCC97C1D6F3A1D1 /* Pods-LotusTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 638H9B3B32;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -564,8 +588,9 @@
 		};
 		9CC02C0023059B570058FAA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B116D683D0EA7A314F61C73B /* Pods-LotusTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 638H9B3B32;
 				INFOPLIST_FILE = Tests/Info.plist;
