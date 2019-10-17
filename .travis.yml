@@ -16,7 +16,7 @@ before_install:
   - gem install cocoapods
 
 script:
-  - pod install
+  - pod install --repo-update
   - set -o pipefail && xcodebuild -scheme Lotus \
     -workspace Lotus.xcworkspace \
     -sdk iphonesimulator \
