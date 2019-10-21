@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'Lotus'
-  s.version      = '0.1.0'
+  s.version      = '0.1.1'
   s.summary      = 'Layer animation DSL'
   s.description  = <<-DESC
   Light and easy to use DSL for animating layers with help of CoreAnimation

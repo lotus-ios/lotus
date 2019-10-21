@@ -125,6 +125,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9C982927235DDC0800857E61 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				D8F8388880E9A99F45C0D129 /* Pods_Lotus.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		9CC02BDD23059B570058FAA5 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +141,7 @@
 				9CC02BE823059B570058FAA5 /* Products */,
 				954BD6E518DB81A6ACBC3D77 /* Pods */,
 				25EE50F1C3FDDD04479ADBE1 /* Frameworks */,
+				9C982927235DDC0800857E61 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -566,6 +575,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vkondrashkov.Lotus;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -595,6 +605,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vkondrashkov.Lotus;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
