@@ -41,7 +41,7 @@ public final class AnimationMaker {
     public var opacity: AnimationMakerAnimatable {
         return makeAnimatableWithAttribute(.opacity, fromValue: item.alpha)
     }
-    
+
     public var rotation: AnimationMakerAnimatable {
         return makeAnimatableWithAttribute(.rotation, fromValue: item.rotation)
     }
@@ -60,8 +60,8 @@ public final class AnimationMaker {
         return animations
     }
 
-    /// TODO: need to change property after animation completion
-    /// to make animation sequences relatively to each other
+    // TODO: need to change property after animation completion
+    // to make animation sequences relatively to each other
     static func makeAnimation(item: CALayer, closure: (AnimationMaker) -> Void) -> CAAnimationGroup {
         let animations = prepareAnimations(item: item, closure: closure)
         let animationGroup = CAAnimationGroup()
@@ -87,4 +87,3 @@ public final class AnimationMaker {
         return AnimationMakerAnimatable(description: description)
     }
 }
-

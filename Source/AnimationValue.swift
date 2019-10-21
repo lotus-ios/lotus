@@ -8,18 +8,18 @@
 
 import UIKit
 
-public protocol AnimationValue { }
+public protocol AnimationValue {}
 
-extension Int: AnimationValue { }
+extension Int: AnimationValue {}
 
-extension UInt: AnimationValue { }
+extension UInt: AnimationValue {}
 
-extension Float: AnimationValue { }
+extension Float: AnimationValue {}
 
-extension Double: AnimationValue { }
+extension Double: AnimationValue {}
 
-extension CGFloat: AnimationValue { }
+extension CGFloat: AnimationValue {}
 
-extension CGSize: AnimationValue { }
+extension CGSize: AnimationValue {}
 
-extension CGPoint: AnimationValue { }
+extension CGPoint: AnimationValue {}

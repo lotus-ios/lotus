@@ -7,12 +7,12 @@
 //
 
 enum AnimationAttribute: String {
-    case position = "position"
+    case position
     case horizontalPosition = "position.x"
     case verticalPosition = "position.y"
     case scale = "transform.scale"
     case widthScale = "transform.scale.x"
     case heightScale = "transform.scale.y"
-    case opacity = "opacity"
+    case opacity
     case rotation = "transform.rotation"
 }

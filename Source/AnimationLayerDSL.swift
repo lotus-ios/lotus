@@ -12,13 +12,12 @@ public struct AnimationLayerDSL {
 
     init(layer: CALayer) {
         self.layer = layer
-        self.animationQueue = AnimationQueue(layer: layer)
+        animationQueue = AnimationQueue(layer: layer)
     }
 
     @discardableResult
-    public func runAnimation(_ closure: (AnimationMaker) -> Void) -> AnimationLayerChainDSL {
-        let animationGroup = AnimationMaker.makeAnimation(item: layer, closure: closure)
-        animationQueue.push(animationGroup)
+    public func runAnimation(_ closure: @escaping (AnimationMaker) -> Void) -> AnimationLayerChainDSL {
+        animationQueue.enqueue(closure)
         animationQueue.run()
         return AnimationLayerChainDSL(layer: layer, animationQueue: animationQueue)
     }

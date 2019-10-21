@@ -8,7 +8,7 @@
 
 public enum EasingType {
     var isComplex: Bool {
-        return self.timingFunction == nil
+        return timingFunction == nil
     }
 
     case custom(CAMediaTimingFunction)
@@ -67,10 +67,4 @@ public enum EasingType {
     case inBack
     case outBack
     case inOutBack
-
-    // MARK: - Elastic
-
-    case inElastic
-    case outElastic
-    case inOutElastic
 }
