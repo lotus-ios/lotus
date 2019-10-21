@@ -51,7 +51,6 @@ public final class Animation {
         )
         animation.beginTime = delay as? CFTimeInterval ?? 0
         animation.fillMode = .forwards
-        animation.isRemovedOnCompletion = false
         animation.timingFunction = easingType.isComplex ?
             CAMediaTimingFunction(name: .linear) :
             easingType.timingFunction
@@ -64,7 +63,6 @@ public final class Animation {
         animation.path = path
         animation.beginTime = delay as? CFTimeInterval ?? 0
         animation.fillMode = .forwards
-        animation.isRemovedOnCompletion = false
         animation.timingFunction = easingType.isComplex ?
             CAMediaTimingFunction(name: .linear) :
             easingType.timingFunction

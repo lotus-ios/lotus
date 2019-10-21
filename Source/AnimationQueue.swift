@@ -7,6 +7,8 @@
 //
 
 final class AnimationQueue: NSObject {
+    private lazy var identifier = String(describing: ObjectIdentifier(self))
+
     private let layer: CALayer
     private var closures: [(AnimationMaker) -> Void] = []
 
@@ -20,7 +22,7 @@ final class AnimationQueue: NSObject {
         }
         let animationGroup = AnimationMaker.makeAnimation(item: layer, closure: closure)
         animationGroup.delegate = self
-        layer.add(animationGroup, forKey: nil)
+        layer.add(animationGroup, forKey: identifier)
     }
 
     func enqueue(_ closure: ((AnimationMaker) -> Void)?) {
@@ -48,6 +50,7 @@ extension AnimationQueue: CAAnimationDelegate {
             layer.transform = presentationLayer.transform
             layer.opacity = presentationLayer.opacity
             layer.position = presentationLayer.position
+            layer.removeAnimation(forKey: identifier)
         }
         run()
     }
