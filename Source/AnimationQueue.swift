@@ -7,7 +7,7 @@
 //
 
 final class AnimationQueue: NSObject {
-    private lazy var identifier = String(UInt(bitPattern: ObjectIdentifier(self)))
+    private lazy var identifier = String(describing: ObjectIdentifier(self))
 
     private let layer: CALayer
     private var closures: [(AnimationMaker) -> Void] = []
