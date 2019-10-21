@@ -67,10 +67,4 @@ public enum EasingType {
     case inBack
     case outBack
     case inOutBack
-
-    // MARK: - Elastic
-
-    case inElastic
-    case outElastic
-    case inOutElastic
 }
