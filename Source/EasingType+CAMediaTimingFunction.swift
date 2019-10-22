@@ -67,8 +67,6 @@ extension EasingType {
             return CAMediaTimingFunction(controlPoints: 0.175, 0.885, 0.32, 1.275)
         case .inOutBack:
             return CAMediaTimingFunction(controlPoints: 0.68, -0.55, 0.265, 1.55)
-        default:
-            return nil
         }
     }
 }
