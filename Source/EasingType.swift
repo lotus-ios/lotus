@@ -6,6 +6,11 @@
 //  Copyright © 2019 Vladislav Kondrashkov. All rights reserved.
 //
 
+import UIKit
+
+/**
+ Easing functions specify the rate of change of a parameter over time.
+ */
 public enum EasingType {
     var isComplex: Bool {
         return timingFunction == nil

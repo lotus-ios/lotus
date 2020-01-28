@@ -8,7 +8,7 @@
 
 import UIKit
 
-public final class Animation {
+final class Animation {
     let keyPath: String?
     let duration: AnimationValue
     let delay: AnimationValue

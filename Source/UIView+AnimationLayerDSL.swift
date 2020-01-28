@@ -9,6 +9,9 @@
 import UIKit
 
 public extension UIView {
+    /**
+     An object that can be used to run Lotus animation. Returns base layer's Lotus object.
+     */
     var lotus: AnimationLayerDSL {
         return layer.lotus
     }

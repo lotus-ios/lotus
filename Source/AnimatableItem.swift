@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ A type that can be used for animations
+ */
 public protocol AnimatableItem: AnyObject {
     var position: CGPoint { get }
     var scale: CGFloat { get }

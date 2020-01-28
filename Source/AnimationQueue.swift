@@ -6,6 +6,8 @@
 //  Copyright © 2019 Vladislav Kondrashkov. All rights reserved.
 //
 
+import UIKit
+
 final class AnimationQueue: NSObject {
     private lazy var identifier = String(describing: ObjectIdentifier(self))
 
