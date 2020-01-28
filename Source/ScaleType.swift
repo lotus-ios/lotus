@@ -14,7 +14,7 @@ public enum ScaleType {
      Indicates that scaling animation would change width via transform.
      */
     case width
-    
+
     /**
      Indicates that scaling animation would change height via transform
      */

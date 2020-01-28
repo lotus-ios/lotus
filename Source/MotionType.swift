@@ -14,7 +14,7 @@ public enum MotionType {
      Indicates that motion animation would change position's Y coordinate
      */
     case vertical
-    
+
     /**
      Indicates that motion animation would change position's X coordinate
      */
