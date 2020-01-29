@@ -12,6 +12,7 @@
 		9C3F2A9123239C2500BAD2D2 /* EasingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9023239C2500BAD2D2 /* EasingType.swift */; };
 		9C3F2A9323239F2700BAD2D2 /* EasingMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */; };
 		9C3F2A952323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */; };
+		9C78BB2F23E1C3CD0019EDE7 /* AnimationMakerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C78BB2D23E1C3C80019EDE7 /* AnimationMakerSpec.swift */; };
 		9CA33F9623323D4200B2CE55 /* AnimationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA33F9523323D4200B2CE55 /* AnimationQueue.swift */; };
 		9CC02BF123059B570058FAA5 /* Lotus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC02BE723059B570058FAA5 /* Lotus.framework */; };
 		9CC02BF623059B570058FAA5 /* AnimationResultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC02BF523059B570058FAA5 /* AnimationResultSpec.swift */; };
@@ -51,6 +52,7 @@
 		9C3F2A9023239C2500BAD2D2 /* EasingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingType.swift; sourceTree = "<group>"; };
 		9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingMaker.swift; sourceTree = "<group>"; };
 		9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EasingType+CAMediaTimingFunction.swift"; sourceTree = "<group>"; };
+		9C78BB2D23E1C3C80019EDE7 /* AnimationMakerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationMakerSpec.swift; sourceTree = "<group>"; };
 		9CA33F9523323D4200B2CE55 /* AnimationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationQueue.swift; sourceTree = "<group>"; };
 		9CC02BE723059B570058FAA5 /* Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC02BEA23059B570058FAA5 /* Lotus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lotus.h; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				9CC02BF523059B570058FAA5 /* AnimationResultSpec.swift */,
+				9C78BB2D23E1C3C80019EDE7 /* AnimationMakerSpec.swift */,
 				9CC02BF723059B570058FAA5 /* Info.plist */,
 			);
 			path = Tests;
@@ -406,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C78BB2F23E1C3CD0019EDE7 /* AnimationMakerSpec.swift in Sources */,
 				9CC02BF623059B570058FAA5 /* AnimationResultSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
