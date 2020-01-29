@@ -8,18 +8,48 @@
 
 import UIKit
 
-public protocol AnimationValue {}
+public protocol AnimationValue {
+    func toCGFloat() -> CGFloat?
+}
 
-extension Int: AnimationValue {}
+extension Int: AnimationValue {
+    public func toCGFloat() -> CGFloat? {
+        return CGFloat(self)
+    }
+}
 
-extension UInt: AnimationValue {}
+extension UInt: AnimationValue {
+    public func toCGFloat() -> CGFloat? {
+        return CGFloat(self)
+    }
+}
 
-extension Float: AnimationValue {}
+extension Float: AnimationValue {
+    public func toCGFloat() -> CGFloat? {
+        return CGFloat(self)
+    }
+}
 
-extension Double: AnimationValue {}
+extension Double: AnimationValue {
+    public func toCGFloat() -> CGFloat? {
+        return CGFloat(self)
+    }
+}
 
-extension CGFloat: AnimationValue {}
+extension CGFloat: AnimationValue {
+    public func toCGFloat() -> CGFloat? {
+        return self
+    }
+}
 
-extension CGSize: AnimationValue {}
+extension CGSize: AnimationValue {
+    public func toCGFloat() -> CGFloat? {
+        return nil
+    }
+}
 
-extension CGPoint: AnimationValue {}
+extension CGPoint: AnimationValue {
+    public func toCGFloat() -> CGFloat? {
+        return nil
+    }
+}
