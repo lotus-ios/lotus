@@ -6,6 +6,8 @@
 //  Copyright © 2019 Vladislav Kondrashkov. All rights reserved.
 //
 
+import UIKit
+
 extension EasingType {
     var timingFunction: CAMediaTimingFunction? {
         switch self {

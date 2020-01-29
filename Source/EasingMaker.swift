@@ -6,6 +6,8 @@
 //  Copyright © 2019 Vladislav Kondrashkov. All rights reserved.
 //
 
+import UIKit
+
 final class EasingMaker {
     /**
      Calculates list of values for specifed type of easing. Returns linear function

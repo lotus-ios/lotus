@@ -9,6 +9,9 @@
 import UIKit
 
 public extension CALayer {
+    /**
+     An object that can be used to run Lotus animations.
+     */
     var lotus: AnimationLayerDSL {
         return AnimationLayerDSL(layer: self)
     }
