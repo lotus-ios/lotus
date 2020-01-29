@@ -42,7 +42,7 @@ final class AnimationResultSpec: QuickSpec {
 
             // MARK: - Motion animation
 
-            it("motion animation should change position") {
+            it("motion animation should change X and Y position") {
                 layer.lotus.runAnimation {
                     $0.motion.to(CGPoint(x: 15.0, y: 25.0)).during(0.01)
                 }
@@ -56,27 +56,27 @@ final class AnimationResultSpec: QuickSpec {
                 }
             }
 
-            it("horizontal motion animation") {
+            it("horizontal motion animation should change X position") {
                 layer.lotus.runAnimation {
                     $0.motion(.horizontal).to(30.0).during(0.01)
                 }
 
                 waitUntil(timeout: 0.5) { done in
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.position.x).to(beCloseTo(30.0))
+                        expect(item.position.x).to(beCloseTo(30.0, within: 0.01))
                         done()
                     }
                 }
             }
 
-            it("vertical motion animation") {
+            it("vertical motion animation should change Y position") {
                 layer.lotus.runAnimation {
                     $0.motion(.vertical).to(27.03).during(0.01)
                 }
 
                 waitUntil(timeout: 0.5) { done in
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.position.y).to(beCloseTo(27.03))
+                        expect(item.position.y).to(beCloseTo(27.03, within: 0.01))
                         done()
                     }
                 }
@@ -84,40 +84,40 @@ final class AnimationResultSpec: QuickSpec {
 
             // MARK: - Scaling animation
 
-            it("scaling animation") {
+            it("scaling animation should change size") {
                 layer.lotus.runAnimation {
                     $0.scaling.to(2.3).during(0.01)
                 }
 
                 waitUntil(timeout: 0.5) { done in
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.scale).to(beCloseTo(2.3))
+                        expect(item.scale).to(beCloseTo(2.3, within: 0.01))
                         done()
                     }
                 }
             }
 
-            it("width scaling animation") {
+            it("width scaling animation should change scale by width") {
                 layer.lotus.runAnimation {
                     $0.scaling(.width).to(1.23).during(0.01)
                 }
 
                 waitUntil(timeout: 0.5) { done in
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.scaleX).to(beCloseTo(1.23))
+                        expect(item.scaleX).to(beCloseTo(1.23, within: 0.01))
                         done()
                     }
                 }
             }
 
-            it("height scaling animation") {
+            it("height scaling animation should change scale by height") {
                 layer.lotus.runAnimation {
                     $0.scaling(.height).to(2.03).during(0.01)
                 }
 
                 waitUntil(timeout: 0.5) { done in
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.scaleY).to(beCloseTo(2.03))
+                        expect(item.scaleY).to(beCloseTo(2.03, within: 0.01))
                         done()
                     }
                 }
@@ -125,27 +125,27 @@ final class AnimationResultSpec: QuickSpec {
 
             // MARK: - Rotation animation
 
-            it("full rotation animation") {
+            it("full rotation animation shouldn't change angle") {
                 layer.lotus.runAnimation {
                     $0.rotation.to(2.0 * .pi).during(0.01)
                 }
 
                 waitUntil(timeout: 0.5) { done in
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.rotation).to(beCloseTo(0.0))
+                        expect(item.rotation).to(beCloseTo(0.0, within: 0.01))
                         done()
                     }
                 }
             }
 
-            it("angle rotation animation") {
+            it("angle rotation animation should change angle") {
                 layer.lotus.runAnimation {
                     $0.rotation.to(23.7 * .pi / 180.0).during(0.01)
                 }
 
                 waitUntil(timeout: 0.5) { done in
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.rotation).to(beCloseTo(23.7 * .pi / 180.0))
+                        expect(item.rotation).to(beCloseTo(23.7 * .pi / 180.0, within: 0.01))
                         done()
                     }
                 }
@@ -153,7 +153,7 @@ final class AnimationResultSpec: QuickSpec {
 
             // MARK: - Opacity tests
 
-            it("opacity animation") {
+            it("opacity animation should change alpha") {
                 layer.lotus.runAnimation {
                     $0.opacity.to(0.7).during(0.01)
                 }
