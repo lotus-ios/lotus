@@ -1,10 +1,10 @@
 # Lotus
 
 ![Language](https://img.shields.io/badge/swift-5-orange.svg)
-[![Build Status](https://travis-ci.org/vkondrashkov/lotus.svg?branch=develop)](https://travis-ci.org/vkondrashkov/lotus)
-[![codecov](https://codecov.io/gh/vkondrashkov/lotus/branch/develop/graph/badge.svg)](https://codecov.io/gh/vkondrashkov/lotus)
+[![Build Status](https://travis-ci.org/lotus-ios/lotus.svg?branch=develop)](https://travis-ci.org/lotus-ios/lotus)
+[![codecov](https://codecov.io/gh/lotus-ios/lotus/branch/develop/graph/badge.svg)](https://codecov.io/gh/lotus-ios/lotus)
 [![Version](https://img.shields.io/cocoapods/v/Lotus.svg?style=flat)](http://cocoapods.org/pods/Lotus)
-[![License](https://img.shields.io/cocoapods/l/Lotus.svg?style=flat)](https://github.com/vkondrashkov/lotus/blob/develop/LICENSE)
+[![License](https://img.shields.io/cocoapods/l/Lotus.svg?style=flat)](https://github.com/lotus-ios/lotus/blob/develop/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/Lotus.svg?style=flat)](http://cocoapods.org/pods/Lotus)
 
 **Lotus** – powerful nano framework that helps implement layer animation with easy syntax. This DSL relieves you from routine code of making animations via CoreAnimation.
