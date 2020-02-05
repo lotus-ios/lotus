@@ -13,6 +13,17 @@
 		9C3F2A9323239F2700BAD2D2 /* EasingMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */; };
 		9C3F2A952323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */; };
 		9CA33F9623323D4200B2CE55 /* AnimationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA33F9523323D4200B2CE55 /* AnimationQueue.swift */; };
+		9CA3434B23EACAB400B0CD83 /* Sine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3434A23EACAB400B0CD83 /* Sine.swift */; };
+		9CA3434D23EACAE200B0CD83 /* EasingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3434C23EACAE200B0CD83 /* EasingFunction.swift */; };
+		9CA3434F23EACC6600B0CD83 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3434E23EACC6600B0CD83 /* Quad.swift */; };
+		9CA3435123EACD2B00B0CD83 /* Cubic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3435023EACD2B00B0CD83 /* Cubic.swift */; };
+		9CA3435323EACDAD00B0CD83 /* Quart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3435223EACDAD00B0CD83 /* Quart.swift */; };
+		9CA3435523EACE2900B0CD83 /* Quint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3435423EACE2900B0CD83 /* Quint.swift */; };
+		9CA3435723EACEEC00B0CD83 /* Expo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3435623EACEEC00B0CD83 /* Expo.swift */; };
+		9CA3435923EACFB300B0CD83 /* Circ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3435823EACFB300B0CD83 /* Circ.swift */; };
+		9CA3435B23EAD04900B0CD83 /* Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3435A23EAD04900B0CD83 /* Back.swift */; };
+		9CA3435D23EAD34A00B0CD83 /* EasingType+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3435C23EAD34A00B0CD83 /* EasingType+Function.swift */; };
+		9CA3436023EAD5D800B0CD83 /* EasingMakerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3435E23EAD5A300B0CD83 /* EasingMakerSpec.swift */; };
 		9CC02BF123059B570058FAA5 /* Lotus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC02BE723059B570058FAA5 /* Lotus.framework */; };
 		9CC02BF623059B570058FAA5 /* AnimationResultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC02BF523059B570058FAA5 /* AnimationResultSpec.swift */; };
 		9CC02BF823059B570058FAA5 /* Lotus.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CC02BEA23059B570058FAA5 /* Lotus.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,6 +63,17 @@
 		9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingMaker.swift; sourceTree = "<group>"; };
 		9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EasingType+CAMediaTimingFunction.swift"; sourceTree = "<group>"; };
 		9CA33F9523323D4200B2CE55 /* AnimationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationQueue.swift; sourceTree = "<group>"; };
+		9CA3434A23EACAB400B0CD83 /* Sine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sine.swift; sourceTree = "<group>"; };
+		9CA3434C23EACAE200B0CD83 /* EasingFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingFunction.swift; sourceTree = "<group>"; };
+		9CA3434E23EACC6600B0CD83 /* Quad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
+		9CA3435023EACD2B00B0CD83 /* Cubic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cubic.swift; sourceTree = "<group>"; };
+		9CA3435223EACDAD00B0CD83 /* Quart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quart.swift; sourceTree = "<group>"; };
+		9CA3435423EACE2900B0CD83 /* Quint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quint.swift; sourceTree = "<group>"; };
+		9CA3435623EACEEC00B0CD83 /* Expo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expo.swift; sourceTree = "<group>"; };
+		9CA3435823EACFB300B0CD83 /* Circ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circ.swift; sourceTree = "<group>"; };
+		9CA3435A23EAD04900B0CD83 /* Back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Back.swift; sourceTree = "<group>"; };
+		9CA3435C23EAD34A00B0CD83 /* EasingType+Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EasingType+Function.swift"; sourceTree = "<group>"; };
+		9CA3435E23EAD5A300B0CD83 /* EasingMakerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingMakerSpec.swift; sourceTree = "<group>"; };
 		9CC02BE723059B570058FAA5 /* Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC02BEA23059B570058FAA5 /* Lotus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lotus.h; sourceTree = "<group>"; };
 		9CC02BEB23059B570058FAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +144,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9CA3434923EACA9800B0CD83 /* Easings */ = {
+			isa = PBXGroup;
+			children = (
+				9CA3434C23EACAE200B0CD83 /* EasingFunction.swift */,
+				9CA3434A23EACAB400B0CD83 /* Sine.swift */,
+				9CA3434E23EACC6600B0CD83 /* Quad.swift */,
+				9CA3435023EACD2B00B0CD83 /* Cubic.swift */,
+				9CA3435223EACDAD00B0CD83 /* Quart.swift */,
+				9CA3435423EACE2900B0CD83 /* Quint.swift */,
+				9CA3435623EACEEC00B0CD83 /* Expo.swift */,
+				9CA3435823EACFB300B0CD83 /* Circ.swift */,
+				9CA3435A23EAD04900B0CD83 /* Back.swift */,
+			);
+			path = Easings;
+			sourceTree = "<group>";
+		};
 		9CC02BDD23059B570058FAA5 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				9CC02BF523059B570058FAA5 /* AnimationResultSpec.swift */,
+				9CA3435E23EAD5A300B0CD83 /* EasingMakerSpec.swift */,
 				9CC02BF723059B570058FAA5 /* Info.plist */,
 			);
 			path = Tests;
@@ -155,10 +194,12 @@
 			isa = PBXGroup;
 			children = (
 				9CC02C0323059C500058FAA5 /* Supporting files */,
+				9CA3434923EACA9800B0CD83 /* Easings */,
 				9CED4305231AE9C300642303 /* MotionType.swift */,
 				9CED4307231AE9CB00642303 /* ScaleType.swift */,
 				9C3F2A9023239C2500BAD2D2 /* EasingType.swift */,
 				9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */,
+				9CA3435C23EAD34A00B0CD83 /* EasingType+Function.swift */,
 				9CA33F9523323D4200B2CE55 /* AnimationQueue.swift */,
 				9CED42FD231AE89C00642303 /* Animation.swift */,
 				9CED42F6231AE85000642303 /* AnimationDescription.swift */,
@@ -381,7 +422,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA3434D23EACAE200B0CD83 /* EasingFunction.swift in Sources */,
 				9CED42E7231AE50500642303 /* UIView+AnimationLayerDSL.swift in Sources */,
+				9CA3435D23EAD34A00B0CD83 /* EasingType+Function.swift in Sources */,
 				9CED4306231AE9C300642303 /* MotionType.swift in Sources */,
 				9CED42ED231AE5C700642303 /* AnimationLayerDSL.swift in Sources */,
 				9CED4308231AE9CB00642303 /* ScaleType.swift in Sources */,
@@ -389,15 +432,23 @@
 				9C3F2A9123239C2500BAD2D2 /* EasingType.swift in Sources */,
 				9CA33F9623323D4200B2CE55 /* AnimationQueue.swift in Sources */,
 				9CED42F1231AE78D00642303 /* AnimationMaker.swift in Sources */,
+				9CA3435323EACDAD00B0CD83 /* Quart.swift in Sources */,
+				9CA3435723EACEEC00B0CD83 /* Expo.swift in Sources */,
+				9CA3434B23EACAB400B0CD83 /* Sine.swift in Sources */,
+				9CA3435923EACFB300B0CD83 /* Circ.swift in Sources */,
 				9C3F2A9323239F2700BAD2D2 /* EasingMaker.swift in Sources */,
 				9CED42F7231AE85000642303 /* AnimationDescription.swift in Sources */,
 				9CED42EF231AE62700642303 /* AnimationLayerChainDSL.swift in Sources */,
 				9CED4300231AE8C300642303 /* AnimationValue.swift in Sources */,
+				9CA3435523EACE2900B0CD83 /* Quint.swift in Sources */,
 				9CED4304231AE92C00642303 /* AnimationMakerEditable.swift in Sources */,
+				9CA3434F23EACC6600B0CD83 /* Quad.swift in Sources */,
 				9C3F2A952323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift in Sources */,
 				9CED42F5231AE7D500642303 /* AnimatableItem.swift in Sources */,
+				9CA3435B23EAD04900B0CD83 /* Back.swift in Sources */,
 				9CED42EB231AE55600642303 /* CALayer+AnimationLayerDSL.swift in Sources */,
 				9CED42FE231AE89C00642303 /* Animation.swift in Sources */,
+				9CA3435123EACD2B00B0CD83 /* Cubic.swift in Sources */,
 				9CED42F9231AE86F00642303 /* AnimationAttribute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA3436023EAD5D800B0CD83 /* EasingMakerSpec.swift in Sources */,
 				9CC02BF623059B570058FAA5 /* AnimationResultSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

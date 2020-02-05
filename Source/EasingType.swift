@@ -16,7 +16,7 @@ public enum EasingType {
         return timingFunction == nil
     }
 
-    case custom(CAMediaTimingFunction)
+    case custom((_ x: Double) -> Double)
 
     // MARK: - CoreAnimation defaults
 
