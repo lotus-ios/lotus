@@ -35,25 +35,22 @@ for i in 0..<10 {
 
 ## Contents
 
-- [Getting started](#getting_started)
+- [Getting started](#getting-started)
   - [Requirements](#requirements)
   - [Installing](#installing)
   - [Usage](#usage)
 - [Documentation](#documentation)
-- [Tests](#tests)
 - [Contributing](#contributing)
 - [Authors](#authors)
 - [License](#license)
 
 ## Getting started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will help you to integrate Lotus into your project.
 
 ### Requirements
 
 - Xcode 10.2+
-- Cocoapods 1.7.0+
-- Git client
 
 ### Installing
 
@@ -64,7 +61,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
@@ -86,7 +83,7 @@ import Lotus
 
 ```swift
 let redSquareLayer = CALayer()
-redSquareLayer.frame = CGRect(x: 50.0, y: 50.0, width: 100.0, height: 100.0)
+redSquareLayer.frame = CGRect(x: 50, y: 50, width: 100, height: 100)
 view.layer.addSublayer(redSquareLayer)
 ```
 
@@ -94,33 +91,25 @@ view.layer.addSublayer(redSquareLayer)
 
 ```swift
 redSquareLayer.lotus.runAnimation { make in
-    make.rotation.to(360.0 * .pi / 180.0).during(2.0)
-}.then { make in
-    make.scaling.to(2.2)
-}.then { make in
-    make.scaling.to(1.8)
+    make.scaling.to(2.0)
 }
 ```
 
 ## Documentation
 
-Find out all accessible facilities in [Documentation](https://github.com/vkondrashkov/lotus/wiki/Documentation)
-
-## Tests
-
-Oops, they have gone somewhere, let's wait for them!
+Find out all accessible facilities in [Documentation](https://lotus-ios.github.io/)
 
 ## Contributing
 
-Coming soon!
+If you found any bug, have great new feature or want to improve documentation – you're welcome! Go to [issue page](https://github.com/lotus-ios/lotus/issues "Issues"), choose template, write details and we will answer you as soon as possible.
 
 ## Authors
 
 - **Vladislav Kondrashkov** - _Initial work_ - [vkondrashkov](https://github.com/vkondrashkov "Vladislav Kondrashkov")
 - **Pavel Kondrashkov** - _Mentor, idea contributor_ - [pkondrashkov](https://github.com/pkondrashkov "Pavel Kondrashkov")
 
-See also the list of [contributors](https://github.com/vkondrashkov/lotus/graphs/contributors "Contributors") who participated in this project.
+See also the list of [contributors](https://github.com/lotus-ios/lotus/graphs/contributors "Contributors") who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/vkondrashkov/ListenTo-iOS/blob/develop/LICENSE "MIT License") file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/lotus-ios/lotus/blob/develop/LICENSE "MIT License") file for details
