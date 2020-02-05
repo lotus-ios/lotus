@@ -19,6 +19,16 @@ final class EasingMakerSpec: QuickSpec {
         }
 
         describe("on make(:)") {
+            it("should make range from start value to end value on custom easing") {
+                let startValue: CGFloat = 100
+                let endValue: CGFloat = 150
+                let values = easingMaker.make(fromValue: startValue, toValue: endValue, easingType: .custom({ $0 * $0 }))
+
+                expect(values.first).to(beCloseTo(startValue))
+                expect(values.last).to(beCloseTo(endValue))
+            }
+
+
             it("should make range from start value to end value on linear easing") {
                 let startValue: CGFloat = 100
                 let endValue: CGFloat = 150
