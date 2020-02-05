@@ -28,6 +28,19 @@ final class EasingMaker {
             assertionFailure("Can't make timing function! Given wrong type!")
             return []
         }
-        return [fromValue, toValue]
+        guard let function = easingType.function else {
+            return [fromValue, toValue]
+        }
+        var values: [CGFloat] = []
+        let keyframesCount = 120
+        var t: Double = 0
+        let dt = 1 / Double(keyframesCount - 1)
+
+        for _ in 0..<keyframesCount {
+            values.append(fromValue + CGFloat(function(t)) * (toValue - fromValue))
+            t += dt
+        }
+
+        return values
     }
 }
