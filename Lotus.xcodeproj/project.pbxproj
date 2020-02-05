@@ -23,6 +23,7 @@
 		9CA3435923EACFB300B0CD83 /* Circ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3435823EACFB300B0CD83 /* Circ.swift */; };
 		9CA3435B23EAD04900B0CD83 /* Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3435A23EAD04900B0CD83 /* Back.swift */; };
 		9CA3435D23EAD34A00B0CD83 /* EasingType+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3435C23EAD34A00B0CD83 /* EasingType+Function.swift */; };
+		9CA3436023EAD5D800B0CD83 /* EasingMakerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3435E23EAD5A300B0CD83 /* EasingMakerSpec.swift */; };
 		9CC02BF123059B570058FAA5 /* Lotus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC02BE723059B570058FAA5 /* Lotus.framework */; };
 		9CC02BF623059B570058FAA5 /* AnimationResultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC02BF523059B570058FAA5 /* AnimationResultSpec.swift */; };
 		9CC02BF823059B570058FAA5 /* Lotus.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CC02BEA23059B570058FAA5 /* Lotus.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -72,6 +73,7 @@
 		9CA3435823EACFB300B0CD83 /* Circ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circ.swift; sourceTree = "<group>"; };
 		9CA3435A23EAD04900B0CD83 /* Back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Back.swift; sourceTree = "<group>"; };
 		9CA3435C23EAD34A00B0CD83 /* EasingType+Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EasingType+Function.swift"; sourceTree = "<group>"; };
+		9CA3435E23EAD5A300B0CD83 /* EasingMakerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingMakerSpec.swift; sourceTree = "<group>"; };
 		9CC02BE723059B570058FAA5 /* Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC02BEA23059B570058FAA5 /* Lotus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lotus.h; sourceTree = "<group>"; };
 		9CC02BEB23059B570058FAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				9CC02BF523059B570058FAA5 /* AnimationResultSpec.swift */,
+				9CA3435E23EAD5A300B0CD83 /* EasingMakerSpec.swift */,
 				9CC02BF723059B570058FAA5 /* Info.plist */,
 			);
 			path = Tests;
@@ -454,6 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA3436023EAD5D800B0CD83 /* EasingMakerSpec.swift in Sources */,
 				9CC02BF623059B570058FAA5 /* AnimationResultSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
