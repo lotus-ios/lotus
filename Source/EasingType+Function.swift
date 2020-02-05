@@ -9,8 +9,6 @@
 extension EasingType {
     var function: ((_ x: Double) -> Double)? {
         switch self {
-        case .custom:
-            return nil
         case .linear:
             return nil
         case .defaultIn:
@@ -19,6 +17,8 @@ extension EasingType {
             return nil
         case .defaultInOut:
             return nil
+        case .custom(let function):
+            return function
         case .inSine:
             return Sine().easeIn
         case .outSine:
