@@ -46,7 +46,7 @@ extension EasingType {
         case .inQuint:
             return Quint().easeIn
         case .outQuint:
-            return Expo().easeOut
+            return Quint().easeOut
         case .inOutQuint:
             return Quint().easeInOut
         case .inExpo:
