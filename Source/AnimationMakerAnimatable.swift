@@ -28,10 +28,8 @@ public final class AnimationMakerAnimatable {
             path.move(to: description.item.position)
             path.addLine(to: point)
             description.path = path.cgPath
-        } else if let double = value as? Double {
-            description.toValue = CGFloat(double)
         } else {
-            description.toValue = value
+            description.toValue = value.animationValueFor(animationAttribute: description.attribute)
         }
         return AnimationMakerEditable(description: description)
     }
