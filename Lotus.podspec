@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.source       = { git: 'https://github.com/vkondrashkov/lotus.git', tag: s.version.to_s }
   s.platform     = :ios, '10.0'
   s.swift_version = '5.0'
-  s.source_files  = 'Source/*.swift'
+  s.source_files  = 'Source/**/*.swift'
 end
