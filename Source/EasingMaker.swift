@@ -6,6 +6,8 @@
 //  Copyright © 2019 Vladislav Kondrashkov. All rights reserved.
 //
 
+import UIKit
+
 final class EasingMaker {
     /**
      Calculates list of values for specifed type of easing. Returns linear function
@@ -18,14 +20,22 @@ final class EasingMaker {
         - easingType: Type of complex easing function.
      - Returns: List of values for specified type of easing and according to given boundaries.
      */
-    func make(fromValue: AnimationValue,
-              toValue: AnimationValue,
+    func make(fromValue: CGFloat,
+              toValue: CGFloat,
               easingType: EasingType) -> [CGFloat] {
-        guard let fromValue = fromValue as? CGFloat,
-            let toValue = toValue as? CGFloat else {
-            assertionFailure("Can't make timing function! Given wrong type!")
-            return []
+        guard let function = easingType.function else {
+            return [fromValue, toValue]
         }
-        return [fromValue, toValue]
+        var values: [CGFloat] = []
+        let keyframesCount = 120
+        var t: Double = 0
+        let dt = 1 / Double(keyframesCount - 1)
+
+        for _ in 0..<keyframesCount {
+            values.append(fromValue + CGFloat(function(t)) * (toValue - fromValue))
+            t += dt
+        }
+
+        return values
     }
 }

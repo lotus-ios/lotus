@@ -8,7 +8,7 @@
 
 import UIKit
 
-public final class AnimationDescription {
+final class AnimationDescription {
     let item: AnimatableItem
     let attribute: AnimationAttribute
 
@@ -26,10 +26,10 @@ public final class AnimationDescription {
     lazy var animation: Animation = {
         Animation(
             keyPath: keyPath,
-            duration: duration,
-            delay: delay,
-            fromValue: fromValue,
-            toValue: toValue,
+            duration: duration.timeValue(),
+            delay: delay.timeValue(),
+            fromValue: fromValue.animationValueFor(animationAttribute: attribute),
+            toValue: toValue.animationValueFor(animationAttribute: attribute),
             easingType: easingType,
             path: path
         )

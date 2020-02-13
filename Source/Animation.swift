@@ -8,12 +8,12 @@
 
 import UIKit
 
-public final class Animation {
+final class Animation {
     let keyPath: String?
-    let duration: AnimationValue
-    let delay: AnimationValue
-    let fromValue: AnimationValue
-    let toValue: AnimationValue
+    let duration: Double
+    let delay: Double
+    let fromValue: CGFloat
+    let toValue: CGFloat
     let easingType: EasingType
     let path: CGPath?
 
@@ -26,10 +26,10 @@ public final class Animation {
     }
 
     init(keyPath: String?,
-         duration: AnimationValue,
-         delay: AnimationValue,
-         fromValue: AnimationValue,
-         toValue: AnimationValue,
+         duration: Double,
+         delay: Double,
+         fromValue: CGFloat,
+         toValue: CGFloat,
          easingType: EasingType,
          path: CGPath?) {
         self.keyPath = keyPath
@@ -43,13 +43,13 @@ public final class Animation {
 
     func valueCoreAnimation() -> CAKeyframeAnimation {
         let animation = CAKeyframeAnimation(keyPath: keyPath)
-        animation.duration = duration as? CFTimeInterval ?? 0
+        animation.duration = duration
         animation.values = EasingMaker().make(
             fromValue: fromValue,
             toValue: toValue,
             easingType: easingType
         )
-        animation.beginTime = delay as? CFTimeInterval ?? 0
+        animation.beginTime = delay
         animation.fillMode = .forwards
         animation.timingFunction = easingType.isComplex ?
             CAMediaTimingFunction(name: .linear) :
@@ -59,9 +59,9 @@ public final class Animation {
 
     func pathCoreAnimation() -> CAKeyframeAnimation {
         let animation = CAKeyframeAnimation(keyPath: keyPath)
-        animation.duration = duration as? CFTimeInterval ?? 0
+        animation.duration = duration
         animation.path = path
-        animation.beginTime = delay as? CFTimeInterval ?? 0
+        animation.beginTime = delay
         animation.fillMode = .forwards
         animation.timingFunction = easingType.isComplex ?
             CAMediaTimingFunction(name: .linear) :

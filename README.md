@@ -1,16 +1,17 @@
 # Lotus
+
 ![Language](https://img.shields.io/badge/swift-5-orange.svg)
-[![Build Status](https://travis-ci.org/vkondrashkov/lotus.svg?branch=develop)](https://travis-ci.org/vkondrashkov/lotus)
-[![codecov](https://codecov.io/gh/vkondrashkov/lotus/branch/develop/graph/badge.svg)](https://codecov.io/gh/vkondrashkov/lotus)
+[![Build Status](https://travis-ci.org/lotus-ios/lotus.svg?branch=develop)](https://travis-ci.org/lotus-ios/lotus)
+[![codecov](https://codecov.io/gh/lotus-ios/lotus/branch/develop/graph/badge.svg)](https://codecov.io/gh/lotus-ios/lotus)
 [![Version](https://img.shields.io/cocoapods/v/Lotus.svg?style=flat)](http://cocoapods.org/pods/Lotus)
-[![License](https://img.shields.io/cocoapods/l/Lotus.svg?style=flat)](https://github.com/vkondrashkov/lotus/blob/develop/LICENSE)
+[![License](https://img.shields.io/cocoapods/l/Lotus.svg?style=flat)](https://github.com/lotus-ios/lotus/blob/develop/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/Lotus.svg?style=flat)](http://cocoapods.org/pods/Lotus)
 
-__Lotus__ – powerful nano framework that helps implement layer animation with easy syntax. This DSL relieves you from routine code of making animations via CoreAnimation.
+**Lotus** – powerful nano framework that helps implement layer animation with easy syntax. This DSL relieves you from routine code of making animations via CoreAnimation.
 
 <img src="Example/Assets/lotus.gif" alt="Lotus" width="200"/>
 
-```Swift
+```swift
 for i in 0..<10 {
     let petalLayer = PetalLayer()
     petalLayer.position = CGPoint(x: view.frame.width / 2, y: view.frame.height / 2 + 60)
@@ -33,75 +34,82 @@ for i in 0..<10 {
 ```
 
 ## Contents
-- [Getting started](#getting_started)
-    - [Requirements](#requirements)
-    - [Installing](#installing)
-    - [Usage](#usage)
+
+- [Getting started](#getting-started)
+  - [Requirements](#requirements)
+  - [Installing](#installing)
+  - [Usage](#usage)
 - [Documentation](#documentation)
-- [Tests](#tests)
 - [Contributing](#contributing)
 - [Authors](#authors)
 - [License](#license)
 
 ## Getting started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Requirements 
+These instructions will help you to integrate Lotus into your project.
+
+### Requirements
+
 - Xcode 10.2+
-- Cocoapods 1.7.0+
-- Git client
 
 ### Installing
+
 #### CocoaPods
-1. In terminal switch to your repository with project
-2. Specify Lotus in your `Podfile`:
-```
+
+1\. In terminal switch to your repository with project  
+2\. Specify Lotus in your `Podfile`:
+
+```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
     pod 'Lotus'
 end
 ```
-3. Run `pod install` command
+
+3\. Run `pod install` command
 
 ### Usage
-1. Import Lotus into your project
-```Swift
+
+1\. Import Lotus into your project
+
+```swift
 import Lotus
 ```
-2. Create any layer and add to `view`'s hierarchy 
-```Swift
+
+2\. Create any layer and add to `view`'s hierarchy
+
+```swift
 let redSquareLayer = CALayer()
-redSquareLayer.frame = CGRect(x: 50.0, y: 50.0, width: 100.0, height: 100.0)
+redSquareLayer.frame = CGRect(x: 50, y: 50, width: 100, height: 100)
 view.layer.addSublayer(redSquareLayer)
 ```
-3. Then run any needed animation whenever you need
-```Swift
+
+3\. Then run any needed animation whenever you need
+
+```swift
 redSquareLayer.lotus.runAnimation { make in
-    make.rotation.to(360.0 * .pi / 180.0).during(2.0)
-}.then { make in
-    make.scaling.to(2.2)
-}.then { make in
-    make.scaling.to(1.8)
+    make.scaling.to(2.0)
 }
 ```
 
 ## Documentation
-Find out all accessible facilities in [Documentation](https://github.com/vkondrashkov/lotus/wiki/Documentation)
 
-## Tests
-Oops, they have gone somewhere, let's wait for them!
+Find out all accessible facilities in [Documentation](https://lotus-ios.github.io/)
 
 ## Contributing
-Coming soon!
+
+If you found any bug, have great new feature or want to improve documentation – you're welcome! Go to [issue page](https://github.com/lotus-ios/lotus/issues "Issues"), choose template, write details and we will answer you as soon as possible.
 
 ## Authors
-- __Vladislav Kondrashkov__ - _Initial work_ - [vkondrashkov](https://github.com/vkondrashkov "Vladislav Kondrashkov")
-- __Pavel Kondrashkov__ - _Mentor, idea contributor_ - [pkondrashkov](https://github.com/pkondrashkov "Pavel Kondrashkov")
 
-See also the list of [contributors](https://github.com/vkondrashkov/lotus/graphs/contributors "Contributors") who participated in this project.
+- **Vladislav Kondrashkov** - _Initial work_ - [vkondrashkov](https://github.com/vkondrashkov "Vladislav Kondrashkov")
+- **Pavel Kondrashkov** - _Mentor, idea contributor_ - [pkondrashkov](https://github.com/pkondrashkov "Pavel Kondrashkov")
+
+See also the list of [contributors](https://github.com/lotus-ios/lotus/graphs/contributors "Contributors") who participated in this project.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/vkondrashkov/ListenTo-iOS/blob/develop/LICENSE "MIT License") file for details
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/lotus-ios/lotus/blob/develop/LICENSE "MIT License") file for details

@@ -8,14 +8,23 @@
 
 import UIKit
 
+/**
+ An object that can be used to set up animation's type.
+ */
 public final class AnimationMaker {
     private let item: AnimatableItem
     private var descriptions: [AnimationDescription] = []
 
+    /**
+     An object that describes position animation on X and Y axes.
+     */
     public var motion: AnimationMakerAnimatable {
         return makeAnimatableWithAttribute(.position, fromValue: item.position)
     }
 
+    /**
+     An object that describes position animation on axis passed as argument.
+     */
     public func motion(_ motionType: MotionType) -> AnimationMakerAnimatable {
         switch motionType {
         case .horizontal:
@@ -25,10 +34,16 @@ public final class AnimationMaker {
         }
     }
 
+    /**
+     An object that describes scale animation in width and height.
+     */
     public var scaling: AnimationMakerAnimatable {
         return makeAnimatableWithAttribute(.scale, fromValue: item.scale)
     }
 
+    /**
+     An object that describes scale animation on dimension passed as argument.
+     */
     public func scaling(_ scaleType: ScaleType) -> AnimationMakerAnimatable {
         switch scaleType {
         case .width:
@@ -38,10 +53,16 @@ public final class AnimationMaker {
         }
     }
 
+    /**
+     An object that describes transparency animation.
+     */
     public var opacity: AnimationMakerAnimatable {
         return makeAnimatableWithAttribute(.opacity, fromValue: item.alpha)
     }
 
+    /**
+     An object that describes rotating animation/
+     */
     public var rotation: AnimationMakerAnimatable {
         return makeAnimatableWithAttribute(.rotation, fromValue: item.rotation)
     }
@@ -60,8 +81,6 @@ public final class AnimationMaker {
         return animations
     }
 
-    // TODO: need to change property after animation completion
-    // to make animation sequences relatively to each other
     static func makeAnimation(item: CALayer, closure: (AnimationMaker) -> Void) -> CAAnimationGroup {
         let animations = prepareAnimations(item: item, closure: closure)
         let animationGroup = CAAnimationGroup()
@@ -69,12 +88,12 @@ public final class AnimationMaker {
         animationGroup.isRemovedOnCompletion = false
         animationGroup.animations = animations.compactMap { $0.coreAnimation }
         let animationWithMaxDuration = animations.max(by: {
-            let rhsTime = ($0.duration as? Double ?? 0) + ($0.delay as? Double ?? 0)
-            let lhsTime = ($1.duration as? Double ?? 0) + ($1.delay as? Double ?? 0)
+            let rhsTime = $0.duration.timeValue() + $0.delay.timeValue()
+            let lhsTime = $1.duration.timeValue() + $1.delay.timeValue()
             return rhsTime < lhsTime
         })
-        let duration = animationWithMaxDuration?.duration as? CFTimeInterval ?? 0
-        let delay = animationWithMaxDuration?.delay as? CFTimeInterval ?? 0
+        let duration = animationWithMaxDuration?.duration.timeValue() ?? 0
+        let delay = animationWithMaxDuration?.delay.timeValue() ?? 0
         animationGroup.duration = duration + delay
         return animationGroup
     }

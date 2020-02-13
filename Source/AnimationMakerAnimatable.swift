@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ An object that can be used to set up animation's final value or destination.
+ */
 public final class AnimationMakerAnimatable {
     let description: AnimationDescription
 
@@ -15,6 +18,9 @@ public final class AnimationMakerAnimatable {
         self.description = description
     }
 
+    /**
+     Sets animation's final or destination value. Returns `AnimationMakerEditable` object that can be used to set up animation capabilities.
+     */
     @discardableResult
     public func to(_ value: AnimationValue) -> AnimationMakerEditable {
         if let point = value as? CGPoint {
@@ -22,10 +28,8 @@ public final class AnimationMakerAnimatable {
             path.move(to: description.item.position)
             path.addLine(to: point)
             description.path = path.cgPath
-        } else if let double = value as? Double {
-            description.toValue = CGFloat(double)
         } else {
-            description.toValue = value
+            description.toValue = value.animationValueFor(animationAttribute: description.attribute)
         }
         return AnimationMakerEditable(description: description)
     }

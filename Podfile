@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-source 'https://github.com/CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org/'
 
 platform :ios, '9.0'
 use_frameworks!
