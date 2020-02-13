@@ -88,12 +88,12 @@ public final class AnimationMaker {
         animationGroup.isRemovedOnCompletion = false
         animationGroup.animations = animations.compactMap { $0.coreAnimation }
         let animationWithMaxDuration = animations.max(by: {
-            let rhsTime = ($0.duration as? Double ?? 0) + ($0.delay as? Double ?? 0)
-            let lhsTime = ($1.duration as? Double ?? 0) + ($1.delay as? Double ?? 0)
+            let rhsTime = $0.duration.timeValue() + $0.delay.timeValue()
+            let lhsTime = $1.duration.timeValue() + $1.delay.timeValue()
             return rhsTime < lhsTime
         })
-        let duration = animationWithMaxDuration?.duration as? CFTimeInterval ?? 0
-        let delay = animationWithMaxDuration?.delay as? CFTimeInterval ?? 0
+        let duration = animationWithMaxDuration?.duration.timeValue() ?? 0
+        let delay = animationWithMaxDuration?.delay.timeValue() ?? 0
         animationGroup.duration = duration + delay
         return animationGroup
     }

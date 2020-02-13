@@ -20,14 +20,9 @@ final class EasingMaker {
         - easingType: Type of complex easing function.
      - Returns: List of values for specified type of easing and according to given boundaries.
      */
-    func make(fromValue: AnimationValue,
-              toValue: AnimationValue,
+    func make(fromValue: CGFloat,
+              toValue: CGFloat,
               easingType: EasingType) -> [CGFloat] {
-        guard let fromValue = fromValue as? CGFloat,
-            let toValue = toValue as? CGFloat else {
-            assertionFailure("Can't make timing function! Given wrong type!")
-            return []
-        }
         guard let function = easingType.function else {
             return [fromValue, toValue]
         }

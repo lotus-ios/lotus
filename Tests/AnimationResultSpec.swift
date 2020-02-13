@@ -42,7 +42,7 @@ final class AnimationResultSpec: QuickSpec {
 
             // MARK: - Motion animation
 
-            it("motion animation should change position") {
+            it("motion animation should change both layer's X and Y positions") {
                 layer.lotus.runAnimation {
                     $0.motion.to(CGPoint(x: 15.0, y: 25.0)).during(0.01)
                 }
@@ -56,9 +56,9 @@ final class AnimationResultSpec: QuickSpec {
                 }
             }
 
-            it("horizontal motion animation") {
+            it("horizontal motion animation should change layer's X position") {
                 layer.lotus.runAnimation {
-                    $0.motion(.horizontal).to(30.0).during(0.01)
+                    $0.motion(.horizontal).to(30).during(0.01)
                 }
 
                 waitUntil(timeout: 0.5) { done in
@@ -69,7 +69,7 @@ final class AnimationResultSpec: QuickSpec {
                 }
             }
 
-            it("vertical motion animation") {
+            it("vertical motion animation should change layer's Y position") {
                 layer.lotus.runAnimation {
                     $0.motion(.vertical).to(27.03).during(0.01)
                 }
@@ -84,7 +84,7 @@ final class AnimationResultSpec: QuickSpec {
 
             // MARK: - Scaling animation
 
-            it("scaling animation") {
+            it("scaling animation should change layer's width and height") {
                 layer.lotus.runAnimation {
                     $0.scaling.to(2.3).during(0.01)
                 }
@@ -97,7 +97,7 @@ final class AnimationResultSpec: QuickSpec {
                 }
             }
 
-            it("width scaling animation") {
+            it("width scaling animation should change layer's width") {
                 layer.lotus.runAnimation {
                     $0.scaling(.width).to(1.23).during(0.01)
                 }
@@ -110,7 +110,7 @@ final class AnimationResultSpec: QuickSpec {
                 }
             }
 
-            it("height scaling animation") {
+            it("height scaling animation should change layer's height") {
                 layer.lotus.runAnimation {
                     $0.scaling(.height).to(2.03).during(0.01)
                 }
@@ -125,7 +125,7 @@ final class AnimationResultSpec: QuickSpec {
 
             // MARK: - Rotation animation
 
-            it("full rotation animation") {
+            it("full rotation animation shouldn't change layer's rotation") {
                 layer.lotus.runAnimation {
                     $0.rotation.to(2.0 * .pi).during(0.01)
                 }
@@ -138,7 +138,7 @@ final class AnimationResultSpec: QuickSpec {
                 }
             }
 
-            it("angle rotation animation") {
+            it("angle rotation animation should change layer's rotation") {
                 layer.lotus.runAnimation {
                     $0.rotation.to(23.7 * .pi / 180.0).during(0.01)
                 }
@@ -153,7 +153,7 @@ final class AnimationResultSpec: QuickSpec {
 
             // MARK: - Opacity tests
 
-            it("opacity animation") {
+            it("opacity animation should change layer's transparency") {
                 layer.lotus.runAnimation {
                     $0.opacity.to(0.7).during(0.01)
                 }
