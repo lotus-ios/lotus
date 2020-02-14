@@ -56,6 +56,24 @@ final class AnimationResultSpec: QuickSpec {
                 }
             }
 
+            it("motion animation along path should change both layer's X and Y positions") {
+                let path = UIBezierPath()
+                path.move(to: layer.position)
+                path.addLine(to: CGPoint(x: 45, y: 50))
+                path.addLine(to: CGPoint(x: 65, y: 63))
+                layer.lotus.runAnimation {
+                    $0.motion.along(path).during(0.01)
+                }
+
+                waitUntil(timeout: 0.5) { done in
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        expect(item.position.x).to(beCloseTo(65, within: 0.01))
+                        expect(item.position.y).to(beCloseTo(63, within: 0.01))
+                        done()
+                    }
+                }
+            }
+
             it("horizontal motion animation should change layer's X position") {
                 layer.lotus.runAnimation {
                     $0.motion(.horizontal).to(30).during(0.01)
