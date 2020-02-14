@@ -18,8 +18,8 @@ public final class AnimationMaker {
     /**
      An object that describes position animation on X and Y axes.
      */
-    public var motion: AnimationMakerAnimatable {
-        return makeAnimatableWithAttribute(.position, fromValue: item.position)
+    public var motion: AnimationMakerMotionAnimatable {
+        return makeMotionAnimatableWithAttribute(.position)
     }
 
     /**
@@ -104,5 +104,11 @@ public final class AnimationMaker {
         description.fromValue = fromValue
         descriptions.append(description)
         return AnimationMakerAnimatable(description: description)
+    }
+
+    private func makeMotionAnimatableWithAttribute(_ attribute: AnimationAttribute) -> AnimationMakerMotionAnimatable {
+        let description = AnimationDescription(item: item, attribute: attribute)
+        descriptions.append(description)
+        return AnimationMakerMotionAnimatable(description: description)
     }
 }
