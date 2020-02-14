@@ -19,11 +19,23 @@ public final class AnimationMakerMotionAnimatable {
     }
 
     /**
-     Sets animation's final or destination value. Returns `AnimationMakerEditable` object that can be used to set up animation capabilities.
+     Sets motion animation's path. Returns `AnimationMakerEditable` object that can be used to set up animation capabilities.
      */
     @discardableResult
     public func along(_ value: PathValue) -> AnimationMakerEditable {
         description.path = value.pathValue()
+        return AnimationMakerEditable(description: description)
+    }
+
+    /**
+     Sets animation's destination value. Returns `AnimationMakerEditable` object that can be used to set up animation capabilities.
+     */
+    @discardableResult
+    public func to(_ value: CGPoint) -> AnimationMakerEditable {
+        let path = UIBezierPath()
+        path.move(to: description.item.position)
+        path.addLine(to: value)
+        description.path = path.cgPath
         return AnimationMakerEditable(description: description)
     }
 }
