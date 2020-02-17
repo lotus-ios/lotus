@@ -20,56 +20,56 @@ final class AnimationValueSpec: QuickSpec {
             }
 
             context("with Int") {
-                animationValue = Int(3)
                 it("should return CGFloat") {
+                    animationValue = Int(3)
                     let result = animationValue.animationValueFor(animationAttribute: .heightScale)
                     expect(result).to(beCloseTo(3))
                 }
             }
 
             context("with UInt") {
-                animationValue = UInt(3)
                 it("should return CGFloat") {
+                    animationValue = UInt(3)
                     let result = animationValue.animationValueFor(animationAttribute: .heightScale)
                     expect(result).to(beCloseTo(3))
                 }
             }
 
             context("with Float") {
-                animationValue = Float(0.3)
                 it("should return CGFloat") {
+                    animationValue = Float(0.3)
                     let result = animationValue.animationValueFor(animationAttribute: .heightScale)
                     expect(result).to(beCloseTo(0.3))
                 }
             }
 
             context("with Double") {
-                animationValue = Double(0.3)
                 it("should return CGFloat") {
+                    animationValue = Double(0.3)
                     let result = animationValue.animationValueFor(animationAttribute: .heightScale)
                     expect(result).to(beCloseTo(0.3))
                 }
             }
 
             context("with CGFloat") {
-                animationValue = CGFloat(0.3)
                 it("should return CGFloat") {
+                    animationValue = CGFloat(0.3)
                     let result = animationValue.animationValueFor(animationAttribute: .heightScale)
                     expect(result).to(beCloseTo(0.3))
                 }
             }
 
             context("with CGSize and heightScale") {
-                animationValue = CGSize(width: 0.3, height: 0.4)
                 it("should return CGFloat for height") {
+                    animationValue = CGSize(width: 0.3, height: 0.4)
                     let result = animationValue.animationValueFor(animationAttribute: .heightScale)
                     expect(result).to(beCloseTo(0.4))
                 }
             }
 
             context("with CGSize and widthScale") {
-                animationValue = CGSize(width: 0.3, height: 0.4)
                 it("should return CGFloat for width") {
+                    animationValue = CGSize(width: 0.3, height: 0.4)
                     let result = animationValue.animationValueFor(animationAttribute: .widthScale)
                     expect(result).to(beCloseTo(0.3))
                 }
