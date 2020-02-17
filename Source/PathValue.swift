@@ -20,12 +20,14 @@ extension PathValue {
             return path.cgPath
         }
 
+        /// Self cannot be optional casted to CGFloat
+        /// CoreGraphics requires to check CFTypeId equality
         let id = CFGetTypeID(self as AnyObject)
         if id == CGPath.typeID {
             return self as! CGPath
         }
 
-        assertionFailure("Post an issue to https://github.com/lotus-ios/lotus with code LFI-45")
+        assertionFailure("Failed to cast PathValue to CGPath")
         return CGPath(rect: .zero, transform: nil)
     }
 }
