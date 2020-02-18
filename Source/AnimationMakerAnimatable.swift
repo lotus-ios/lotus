@@ -23,14 +23,7 @@ public final class AnimationMakerAnimatable {
      */
     @discardableResult
     public func to(_ value: AnimationValue) -> AnimationMakerEditable {
-        if let point = value as? CGPoint {
-            let path = UIBezierPath()
-            path.move(to: description.item.position)
-            path.addLine(to: point)
-            description.path = path.cgPath
-        } else {
-            description.toValue = value.animationValueFor(animationAttribute: description.attribute)
-        }
+        description.toValue = value.animationValueFor(animationAttribute: description.attribute)
         return AnimationMakerEditable(description: description)
     }
 }

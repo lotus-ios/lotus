@@ -38,131 +38,145 @@ final class AnimationResultSpec: QuickSpec {
             window.makeKeyAndVisible()
         }
 
-        context("running Lotus'") {
+        describe("on runAnimation(:)") {
 
-            // MARK: - Motion animation
+            // MARK: - Motion animations
 
-            it("motion animation should change both layer's X and Y positions") {
-                layer.lotus.runAnimation {
-                    $0.motion.to(CGPoint(x: 15.0, y: 25.0)).during(0.01)
+            context("when motion animation completed") {
+                beforeEach {
+                    layer.lotus.runAnimation {
+                        $0.motion.to(CGPoint(x: 15, y: 25)).during(0.01)
+                    }
                 }
 
-                waitUntil(timeout: 0.5) { done in
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.position.x).to(beCloseTo(15.0, within: 0.01))
-                        expect(item.position.y).to(beCloseTo(25.0, within: 0.01))
-                        done()
-                    }
+                it("should change layer's X position") {
+                    expect(item.position.x).toEventually(beCloseTo(15.0, within: 0.01))
+                }
+
+                it("should change layer's Y position") {
+                    expect(item.position.y).toEventually(beCloseTo(25.0, within: 0.01))
                 }
             }
 
-            it("horizontal motion animation should change layer's X position") {
-                layer.lotus.runAnimation {
-                    $0.motion(.horizontal).to(30).during(0.01)
+            context("when motion animation along path completed") {
+                beforeEach {
+                    let path = UIBezierPath()
+                    path.move(to: layer.position)
+                    path.addLine(to: CGPoint(x: 45, y: 50))
+                    path.addLine(to: CGPoint(x: 65, y: 63))
+                    layer.lotus.runAnimation {
+                        $0.motion.along(path).during(0.01)
+                    }
                 }
 
-                waitUntil(timeout: 0.5) { done in
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.position.x).to(beCloseTo(30.0))
-                        done()
-                    }
+                it("should change layer's X position") {
+                    expect(item.position.x).toEventually(beCloseTo(65, within: 0.01))
+                }
+
+                it("should change layer's Y position") {
+                    expect(item.position.y).toEventually(beCloseTo(63, within: 0.01))
                 }
             }
 
-            it("vertical motion animation should change layer's Y position") {
-                layer.lotus.runAnimation {
-                    $0.motion(.vertical).to(27.03).during(0.01)
+            context("when horizontal motion animation completed") {
+                beforeEach {
+                    layer.lotus.runAnimation {
+                        $0.motion(.horizontal).to(30).during(0.01)
+                    }
                 }
 
-                waitUntil(timeout: 0.5) { done in
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.position.y).to(beCloseTo(27.03))
-                        done()
-                    }
+                it("should change layer's X position") {
+                    expect(item.position.x).toEventually(beCloseTo(30.0))
                 }
             }
 
-            // MARK: - Scaling animation
-
-            it("scaling animation should change layer's width and height") {
-                layer.lotus.runAnimation {
-                    $0.scaling.to(2.3).during(0.01)
+            context("when vertical motion animation completed") {
+                beforeEach {
+                    layer.lotus.runAnimation {
+                        $0.motion(.vertical).to(27.03).during(0.01)
+                    }
                 }
 
-                waitUntil(timeout: 0.5) { done in
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.scale).to(beCloseTo(2.3))
-                        done()
-                    }
+                it("should change layer's Y position") {
+                    expect(item.position.y).toEventually(beCloseTo(27.03))
                 }
             }
 
-            it("width scaling animation should change layer's width") {
-                layer.lotus.runAnimation {
-                    $0.scaling(.width).to(1.23).during(0.01)
+            // MARK: - Scaling animations
+
+            context("when scaling animation completed") {
+                beforeEach {
+                    layer.lotus.runAnimation {
+                        $0.scaling.to(2.3).during(0.01)
+                    }
                 }
 
-                waitUntil(timeout: 0.5) { done in
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.scaleX).to(beCloseTo(1.23))
-                        done()
-                    }
+                it("should change layer's scale") {
+                    expect(item.scale).toEventually(beCloseTo(2.3))
                 }
             }
 
-            it("height scaling animation should change layer's height") {
-                layer.lotus.runAnimation {
-                    $0.scaling(.height).to(2.03).during(0.01)
+            context("when width scaling animation completed") {
+                beforeEach {
+                    layer.lotus.runAnimation {
+                        $0.scaling(.width).to(1.23).during(0.01)
+                    }
                 }
 
-                waitUntil(timeout: 0.5) { done in
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.scaleY).to(beCloseTo(2.03))
-                        done()
-                    }
+                it("should change layer's width scale") {
+                    expect(item.scaleX).toEventually(beCloseTo(1.23))
                 }
             }
 
-            // MARK: - Rotation animation
-
-            it("full rotation animation shouldn't change layer's rotation") {
-                layer.lotus.runAnimation {
-                    $0.rotation.to(2.0 * .pi).during(0.01)
+            context("when height scaling animation completed") {
+                beforeEach {
+                    layer.lotus.runAnimation {
+                        $0.scaling(.height).to(2.03).during(0.01)
+                    }
                 }
 
-                waitUntil(timeout: 0.5) { done in
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.rotation).to(beCloseTo(0.0))
-                        done()
-                    }
+                it("should change layer's height scale") {
+                    expect(item.scaleY).toEventually(beCloseTo(2.03))
                 }
             }
 
-            it("angle rotation animation should change layer's rotation") {
-                layer.lotus.runAnimation {
-                    $0.rotation.to(23.7 * .pi / 180.0).during(0.01)
+            // MARK: - Rotation animations
+
+            context("when full rotation animation completed") {
+                beforeEach {
+                    layer.lotus.runAnimation {
+                        $0.rotation.to(2.0 * .pi).during(0.01)
+                    }
                 }
 
-                waitUntil(timeout: 0.5) { done in
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.rotation).to(beCloseTo(23.7 * .pi / 180.0))
-                        done()
-                    }
+                it("shouldn't change layer's rotation") {
+                    expect(item.rotation).toEventually(beCloseTo(0.0))
                 }
             }
 
-            // MARK: - Opacity tests
-
-            it("opacity animation should change layer's transparency") {
-                layer.lotus.runAnimation {
-                    $0.opacity.to(0.7).during(0.01)
+            context("when angle rotation animation completed") {
+                beforeEach {
+                    layer.lotus.runAnimation {
+                        $0.rotation.to(23.7 * .pi / 180.0).during(0.01)
+                    }
                 }
 
-                waitUntil(timeout: 0.5) { done in
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        expect(item.alpha).to(beCloseTo(0.7, within: 0.01))
-                        done()
+                it("should change layer's rotation") {
+                    expect(item.rotation).toEventually(beCloseTo(23.7 * .pi / 180.0))
+                }
+            }
+
+            // MARK: - Opacity animations
+
+            context("when opacity animation completed") {
+                beforeEach {
+                    layer.lotus.runAnimation {
+                        $0.opacity.to(0.7).during(0.01)
                     }
+                }
+
+                it("should change layer's transparency") {
+                    expect(item.alpha).toEventually(beCloseTo(0.7, within: 0.01))
                 }
             }
         }

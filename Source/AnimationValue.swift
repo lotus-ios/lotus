@@ -22,8 +22,6 @@ extension CGFloat: AnimationValue {}
 
 extension CGSize: AnimationValue {}
 
-extension CGPoint: AnimationValue {}
-
 extension AnimationValue {
     func animationValueFor(animationAttribute: AnimationAttribute) -> CGFloat {
         if let value = self as? CGFloat {

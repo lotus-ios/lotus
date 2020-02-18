@@ -12,6 +12,10 @@
 		9C3F2A9123239C2500BAD2D2 /* EasingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9023239C2500BAD2D2 /* EasingType.swift */; };
 		9C3F2A9323239F2700BAD2D2 /* EasingMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */; };
 		9C3F2A952323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */; };
+		9C92217023F684CC0071A6F9 /* AnimationMakerMotionAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C92216F23F684CC0071A6F9 /* AnimationMakerMotionAnimatable.swift */; };
+		9C92217223F6851D0071A6F9 /* PathValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C92217123F6851D0071A6F9 /* PathValue.swift */; };
+		9C92217523F69E7B0071A6F9 /* AnimationValueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C92217323F69E440071A6F9 /* AnimationValueSpec.swift */; };
+		9C92217823F6A0410071A6F9 /* PathValueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C92217623F6A03A0071A6F9 /* PathValueSpec.swift */; };
 		9CA33F9623323D4200B2CE55 /* AnimationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA33F9523323D4200B2CE55 /* AnimationQueue.swift */; };
 		9CA3434B23EACAB400B0CD83 /* Sine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3434A23EACAB400B0CD83 /* Sine.swift */; };
 		9CA3434D23EACAE200B0CD83 /* EasingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3434C23EACAE200B0CD83 /* EasingFunction.swift */; };
@@ -62,6 +66,10 @@
 		9C3F2A9023239C2500BAD2D2 /* EasingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingType.swift; sourceTree = "<group>"; };
 		9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingMaker.swift; sourceTree = "<group>"; };
 		9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EasingType+CAMediaTimingFunction.swift"; sourceTree = "<group>"; };
+		9C92216F23F684CC0071A6F9 /* AnimationMakerMotionAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationMakerMotionAnimatable.swift; sourceTree = "<group>"; };
+		9C92217123F6851D0071A6F9 /* PathValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathValue.swift; sourceTree = "<group>"; };
+		9C92217323F69E440071A6F9 /* AnimationValueSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationValueSpec.swift; sourceTree = "<group>"; };
+		9C92217623F6A03A0071A6F9 /* PathValueSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathValueSpec.swift; sourceTree = "<group>"; };
 		9CA33F9523323D4200B2CE55 /* AnimationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationQueue.swift; sourceTree = "<group>"; };
 		9CA3434A23EACAB400B0CD83 /* Sine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sine.swift; sourceTree = "<group>"; };
 		9CA3434C23EACAE200B0CD83 /* EasingFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingFunction.swift; sourceTree = "<group>"; };
@@ -184,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				9CC02BF523059B570058FAA5 /* AnimationResultSpec.swift */,
+				9C92217323F69E440071A6F9 /* AnimationValueSpec.swift */,
+				9C92217623F6A03A0071A6F9 /* PathValueSpec.swift */,
 				9CA3435E23EAD5A300B0CD83 /* EasingMakerSpec.swift */,
 				9CC02BF723059B570058FAA5 /* Info.plist */,
 			);
@@ -205,11 +215,13 @@
 				9CED42F6231AE85000642303 /* AnimationDescription.swift */,
 				9CED42F8231AE86F00642303 /* AnimationAttribute.swift */,
 				9CED42FF231AE8C300642303 /* AnimationValue.swift */,
+				9C92217123F6851D0071A6F9 /* PathValue.swift */,
 				9CED42F4231AE7D500642303 /* AnimatableItem.swift */,
 				9CED42EC231AE5C700642303 /* AnimationLayerDSL.swift */,
 				9CED42EE231AE62700642303 /* AnimationLayerChainDSL.swift */,
 				9CED42F0231AE78D00642303 /* AnimationMaker.swift */,
 				9CED4301231AE90400642303 /* AnimationMakerAnimatable.swift */,
+				9C92216F23F684CC0071A6F9 /* AnimationMakerMotionAnimatable.swift */,
 				9CED4303231AE92C00642303 /* AnimationMakerEditable.swift */,
 				9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */,
 				9CED42EA231AE55600642303 /* CALayer+AnimationLayerDSL.swift */,
@@ -432,6 +444,7 @@
 				9C3F2A9123239C2500BAD2D2 /* EasingType.swift in Sources */,
 				9CA33F9623323D4200B2CE55 /* AnimationQueue.swift in Sources */,
 				9CED42F1231AE78D00642303 /* AnimationMaker.swift in Sources */,
+				9C92217223F6851D0071A6F9 /* PathValue.swift in Sources */,
 				9CA3435323EACDAD00B0CD83 /* Quart.swift in Sources */,
 				9CA3435723EACEEC00B0CD83 /* Expo.swift in Sources */,
 				9CA3434B23EACAB400B0CD83 /* Sine.swift in Sources */,
@@ -443,6 +456,7 @@
 				9CA3435523EACE2900B0CD83 /* Quint.swift in Sources */,
 				9CED4304231AE92C00642303 /* AnimationMakerEditable.swift in Sources */,
 				9CA3434F23EACC6600B0CD83 /* Quad.swift in Sources */,
+				9C92217023F684CC0071A6F9 /* AnimationMakerMotionAnimatable.swift in Sources */,
 				9C3F2A952323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift in Sources */,
 				9CED42F5231AE7D500642303 /* AnimatableItem.swift in Sources */,
 				9CA3435B23EAD04900B0CD83 /* Back.swift in Sources */,
@@ -458,7 +472,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CA3436023EAD5D800B0CD83 /* EasingMakerSpec.swift in Sources */,
+				9C92217523F69E7B0071A6F9 /* AnimationValueSpec.swift in Sources */,
 				9CC02BF623059B570058FAA5 /* AnimationResultSpec.swift in Sources */,
+				9C92217823F6A0410071A6F9 /* PathValueSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +548,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -589,6 +606,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

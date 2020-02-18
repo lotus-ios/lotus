@@ -1,3 +1,7 @@
+# Changelog for Lotus 0.3.0
+## Added
+* Motion animations along UIBezierPath and CGPath
+
 # Changelog for Lotus 0.2.0
 ## Added
 * Documentation on [Github Pages](lotus-docs.github.io)
