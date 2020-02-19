@@ -22,7 +22,9 @@ final class AnimationQueue: NSObject {
         guard let closure = dequeue() else {
             return
         }
-        let animationGroup = AnimationMaker.makeAnimation(item: layer, closure: closure)
+        guard let animationGroup = AnimationMaker.makeAnimation(item: layer, closure: closure) else {
+            return
+        }
         animationGroup.delegate = self
         layer.add(animationGroup, forKey: identifier)
     }
@@ -52,8 +54,8 @@ extension AnimationQueue: CAAnimationDelegate {
             layer.transform = presentationLayer.transform
             layer.opacity = presentationLayer.opacity
             layer.position = presentationLayer.position
-            layer.removeAnimation(forKey: identifier)
         }
+        layer.removeAnimation(forKey: identifier)
         run()
     }
 }
