@@ -44,7 +44,7 @@ final class AnimationResultSpec: QuickSpec {
 
             context("when motion animation completed") {
                 beforeEach {
-                    layer.lotus.runAnimation {
+                    layer.lotus.animate {
                         $0.motion.to(CGPoint(x: 15, y: 25)).during(0.01)
                     }
                 }
@@ -64,7 +64,7 @@ final class AnimationResultSpec: QuickSpec {
                     path.move(to: layer.position)
                     path.addLine(to: CGPoint(x: 45, y: 50))
                     path.addLine(to: CGPoint(x: 65, y: 63))
-                    layer.lotus.runAnimation {
+                    layer.lotus.animate {
                         $0.motion.along(path).during(0.01)
                     }
                 }
@@ -80,7 +80,7 @@ final class AnimationResultSpec: QuickSpec {
 
             context("when horizontal motion animation completed") {
                 beforeEach {
-                    layer.lotus.runAnimation {
+                    layer.lotus.animate {
                         $0.motion(.horizontal).to(30).during(0.01)
                     }
                 }
@@ -92,7 +92,7 @@ final class AnimationResultSpec: QuickSpec {
 
             context("when vertical motion animation completed") {
                 beforeEach {
-                    layer.lotus.runAnimation {
+                    layer.lotus.animate {
                         $0.motion(.vertical).to(27.03).during(0.01)
                     }
                 }
@@ -106,7 +106,7 @@ final class AnimationResultSpec: QuickSpec {
 
             context("when scaling animation completed") {
                 beforeEach {
-                    layer.lotus.runAnimation {
+                    layer.lotus.animate {
                         $0.scaling.to(2.3).during(0.01)
                     }
                 }
@@ -118,7 +118,7 @@ final class AnimationResultSpec: QuickSpec {
 
             context("when width scaling animation completed") {
                 beforeEach {
-                    layer.lotus.runAnimation {
+                    layer.lotus.animate {
                         $0.scaling(.width).to(1.23).during(0.01)
                     }
                 }
@@ -130,7 +130,7 @@ final class AnimationResultSpec: QuickSpec {
 
             context("when height scaling animation completed") {
                 beforeEach {
-                    layer.lotus.runAnimation {
+                    layer.lotus.animate {
                         $0.scaling(.height).to(2.03).during(0.01)
                     }
                 }
@@ -144,7 +144,7 @@ final class AnimationResultSpec: QuickSpec {
 
             context("when full rotation animation completed") {
                 beforeEach {
-                    layer.lotus.runAnimation {
+                    layer.lotus.animate {
                         $0.rotation.to(2.0 * .pi).during(0.01)
                     }
                 }
@@ -156,7 +156,7 @@ final class AnimationResultSpec: QuickSpec {
 
             context("when angle rotation animation completed") {
                 beforeEach {
-                    layer.lotus.runAnimation {
+                    layer.lotus.animate {
                         $0.rotation.to(23.7 * .pi / 180.0).during(0.01)
                     }
                 }
@@ -170,7 +170,7 @@ final class AnimationResultSpec: QuickSpec {
 
             context("when opacity animation completed") {
                 beforeEach {
-                    layer.lotus.runAnimation {
+                    layer.lotus.animate {
                         $0.opacity.to(0.7).during(0.01)
                     }
                 }
