@@ -24,7 +24,7 @@ public struct AnimationLayerDSL {
      Returns `AnimationMaker` object in closure that can be used to set up animation which would run after calling this method
      */
     @discardableResult
-    public func runAnimation(_ closure: @escaping (AnimationMaker) -> Void) -> AnimationLayerChainDSL {
+    public func animate(_ closure: @escaping (AnimationMaker) -> Void) -> AnimationLayerChainDSL {
         animationQueue.enqueue(closure)
         animationQueue.run()
         return AnimationLayerChainDSL(layer: layer, animationQueue: animationQueue)

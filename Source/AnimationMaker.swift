@@ -81,8 +81,10 @@ public final class AnimationMaker {
         return animations
     }
 
-    static func makeAnimation(item: CALayer, closure: (AnimationMaker) -> Void) -> CAAnimationGroup {
+    static func makeAnimation(item: CALayer, closure: (AnimationMaker) -> Void) -> CAAnimationGroup? {
         let animations = prepareAnimations(item: item, closure: closure)
+        guard !animations.isEmpty else { return nil }
+
         let animationGroup = CAAnimationGroup()
         animationGroup.fillMode = .forwards
         animationGroup.isRemovedOnCompletion = false

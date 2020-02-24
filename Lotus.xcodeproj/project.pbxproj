@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8672419A23585A7B0039A018 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672419923585A7B0039A018 /* Foundation.framework */; };
 		8672419B23585A8A0039A018 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672419923585A7B0039A018 /* Foundation.framework */; };
+		9C0A009123FD84C800618BD3 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A009023FD84C800618BD3 /* Deprecated.swift */; };
 		9C3F2A9123239C2500BAD2D2 /* EasingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9023239C2500BAD2D2 /* EasingType.swift */; };
 		9C3F2A9323239F2700BAD2D2 /* EasingMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */; };
 		9C3F2A952323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */; };
@@ -63,6 +64,7 @@
 		28F67D8854D85ACD18C5FFBB /* Pods-Lotus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotus.debug.xcconfig"; path = "Target Support Files/Pods-Lotus/Pods-Lotus.debug.xcconfig"; sourceTree = "<group>"; };
 		336872AFC0881FB7A36496D5 /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8672419923585A7B0039A018 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9C0A009023FD84C800618BD3 /* Deprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deprecated.swift; sourceTree = "<group>"; };
 		9C3F2A9023239C2500BAD2D2 /* EasingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingType.swift; sourceTree = "<group>"; };
 		9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasingMaker.swift; sourceTree = "<group>"; };
 		9C3F2A942323B9A100BAD2D2 /* EasingType+CAMediaTimingFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EasingType+CAMediaTimingFunction.swift"; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				9C3F2A9223239F2700BAD2D2 /* EasingMaker.swift */,
 				9CED42EA231AE55600642303 /* CALayer+AnimationLayerDSL.swift */,
 				9CED42E6231AE50500642303 /* UIView+AnimationLayerDSL.swift */,
+				9C0A009023FD84C800618BD3 /* Deprecated.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				9CED42F7231AE85000642303 /* AnimationDescription.swift in Sources */,
 				9CED42EF231AE62700642303 /* AnimationLayerChainDSL.swift in Sources */,
 				9CED4300231AE8C300642303 /* AnimationValue.swift in Sources */,
+				9C0A009123FD84C800618BD3 /* Deprecated.swift in Sources */,
 				9CA3435523EACE2900B0CD83 /* Quint.swift in Sources */,
 				9CED4304231AE92C00642303 /* AnimationMakerEditable.swift in Sources */,
 				9CA3434F23EACC6600B0CD83 /* Quad.swift in Sources */,
